@@ -1,0 +1,42 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.0
+  Exclude:
+    - 'vendor/**/*'
+    - 'lib/cloudkeeper_grpc/*'
+
+Metrics/LineLength:
+  Max: 135
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 120
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 3
+
+RSpec/NestedGroups:
+  Max: 4
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - '*.gemspec'
+    - 'lib/cloudkeeper/grpc/*'
