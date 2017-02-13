@@ -4,15 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cloudkeeper/one/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cloudkeeper-one"
+  spec.name          = 'cloudkeeper-one'
   spec.version       = Cloudkeeper::One::VERSION
-  spec.authors       = ["Michal Kimle"]
-  spec.email         = ["kimle.michal@gmail.com"]
+  spec.authors       = ['Michal Kimle']
+  spec.email         = ['kimle.michal@gmail.com']
 
-  spec.summary       = %q{OpenNebula backend for cloudkeeper}
-  spec.description   = %q{OpenNebula backend for cloudkeeper}
-  spec.homepage      = "https://github.com/Misenko/cloudkeeper-one"
-  spec.license       = "Apache License, Version 2.0"
+  spec.summary       = 'OpenNebula backend for cloudkeeper'
+  spec.description   = 'OpenNebula backend for cloudkeeper'
+  spec.homepage      = 'https://github.com/Misenko/cloudkeeper-one'
+  spec.license       = 'Apache License, Version 2.0'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
