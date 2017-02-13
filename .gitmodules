@@ -1,0 +1,3 @@
+[submodule "lib/cloudkeeper_grpc"]
+	path = lib/cloudkeeper_grpc
+	url = https://github.com/the-cloudkeeper-project/cloudkeeper-grpc-ruby.git
