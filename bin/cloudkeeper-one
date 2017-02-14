@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'cloudkeeper_grpc'
+require 'cloudkeeper/one'
+
+Cloudkeeper::One::CLI.start(ARGV)
