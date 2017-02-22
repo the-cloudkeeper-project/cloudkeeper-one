@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'settingslogic', '~> 2.0'
   spec.add_runtime_dependency 'activesupport', '~> 4.0'
   spec.add_runtime_dependency 'tilt', '~> 2.0'
+  spec.add_runtime_dependency 'opennebula', '~> 5.2'
 
   spec.required_ruby_version = '>= 2.2.0'
 end

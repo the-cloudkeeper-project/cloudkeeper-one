@@ -1,0 +1,331 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.delete</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>2</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '212'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '251'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>2</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:23 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '7075'
+      Connection:
+      - close
+      Date:
+      - Sun, 19 Feb 2017 12:09:21 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434212&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/dd73aa0dbe94f2c95be00f80100540d2]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434220&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/49530f24e816e4fa59db5ab9dcd68b11]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;4&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434228&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/13b4a59d1b958fabef3a8dbe3330a589]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-nospec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SPEC_ATTRIBUTE&gt;&lt;![CDATA[test]]&gt;&lt;/SPEC_ATTRIBUTE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;UID&gt;3&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;kile&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487434235&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/2e68062a11a597b2263a1b32adac845d]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/186f661fbc46f3dfa8a24003cc6f4853]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;40&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sun, 19 Feb 2017 11:09:22 GMT
+recorded_with: VCR 3.0.3

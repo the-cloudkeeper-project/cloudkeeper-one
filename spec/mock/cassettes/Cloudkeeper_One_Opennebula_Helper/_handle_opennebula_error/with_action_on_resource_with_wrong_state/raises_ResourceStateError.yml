@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.delete</methodName><params><param><value><string>user:opennebula</string></value></param><param><value><i4>0</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '208'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '321'
+      Connection:
+      - close
+      Date:
+      - Sat, 18 Feb 2017 18:16:14 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>0</boolean></value>\r\n<value><string>[ImageDelete]
+        Cannot delete image. There are 1 VMs using it.</string></value>\r\n<value><i4>2048</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Sat, 18 Feb 2017 17:16:16 GMT
+recorded_with: VCR 3.0.3

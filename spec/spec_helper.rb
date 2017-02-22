@@ -1,6 +1,7 @@
 require 'simplecov'
 require 'yell'
 require 'rspec/collection_matchers'
+require 'webmock/rspec'
 require 'vcr'
 require 'json'
 
@@ -9,14 +10,20 @@ SimpleCov.start do
   add_filter '/spec'
 end
 
-Diffy::Diff.default_format = :color
-
 require 'cloudkeeper_grpc'
 require 'cloudkeeper/one'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 MOCK_DIR = File.join(File.dirname(__FILE__), 'mock')
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
+VCR.configure do |config|
+  config.cassette_library_dir = File.join(MOCK_DIR, 'cassettes')
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+end
 
 RSpec.configure do |config|
   config.color = true
