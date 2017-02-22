@@ -1,5 +1,6 @@
 require 'thor'
 require 'yell'
+require 'chronic_duration'
 
 module Cloudkeeper
   module One
@@ -106,6 +107,8 @@ module Cloudkeeper
         gem_dir = File.realdirpath(File.join(File.dirname(__FILE__), '..'))
         Cloudkeeper::One::Settings[:'appliances-template-dir'] = File.join(gem_dir, 'config', 'templates') \
           unless Cloudkeeper::One::Settings[:'appliances-template-dir']
+        Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'] = \
+          ChronicDuration.parse Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'], keep_zero: true
       end
 
       # Inits logging according to the settings
