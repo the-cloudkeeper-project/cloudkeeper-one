@@ -48,7 +48,7 @@ module Cloudkeeper
         end
 
         def reload!
-          return unless pool
+          raise Cloudkeeper::One::Errors::Opennebula::MissingPoolError, 'Handler is missing an OpenNebula pool' unless pool
 
           method = pool.respond_to?('info_all!') ? 'info_all!' : 'info!'
           handle_opennebula_error { pool.send(method.to_sym) }

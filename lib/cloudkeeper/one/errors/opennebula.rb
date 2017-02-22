@@ -4,6 +4,7 @@ module Cloudkeeper
       module Opennebula
         autoload :OpennebulaError, 'cloudkeeper/one/errors/opennebula/opennebula_error'
         autoload :StubError, 'cloudkeeper/one/errors/opennebula/stub_error'
+        autoload :MissingPoolError, 'cloudkeeper/one/errors/opennebula/missing_pool_error'
         autoload :ApiCallTimeoutError, 'cloudkeeper/one/errors/opennebula/api_call_timeout_error'
         autoload :AuthenticationError, 'cloudkeeper/one/errors/opennebula/authentication_error'
         autoload :ResourceNotFoundError, 'cloudkeeper/one/errors/opennebula/resource_not_found_error'

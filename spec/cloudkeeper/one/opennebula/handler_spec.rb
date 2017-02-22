@@ -194,6 +194,12 @@ describe Cloudkeeper::One::Opennebula::Handler do
   end
 
   describe '.reload!' do
+    context 'without a pool' do
+      it 'raises MissingPoolError' do
+        expect { handler.send(:reload!) }.to raise_error(Cloudkeeper::One::Errors::Opennebula::MissingPoolError)
+      end
+    end
+
     context 'on pool with info_all! method' do
       before do
         handler.pool = OpenNebula::ImagePool.new handler.client
