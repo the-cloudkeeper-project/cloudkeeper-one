@@ -9,6 +9,8 @@ module Cloudkeeper
           error: 'ERROR'
         }.freeze
 
+        EXPIRED_PERMISSIONS = '600'
+
         def initialize
           super
           @pool = OpenNebula::ImagePool.new client
@@ -65,6 +67,7 @@ module Cloudkeeper
             return
           end
 
+          chmod image, EXPIRED_PERMISSIONS
           disable image
 
           expiration_attribute = "#{Tags::EXPIRED} = \"yes\""
@@ -73,13 +76,16 @@ module Cloudkeeper
           handle_opennebula_error { image.update(expiration_attribute, true) }
         end
 
-        def register(template, datastore)
+        def register(image_template, datastore, group)
           image_alloc = OpenNebula::Image.build_xml
           image = OpenNebula::Image.new(image_alloc, client)
 
-          handle_opennebula_error { image.allocate(template, datastore.id) }
+          handle_opennebula_error { image.allocate(image_template, datastore.id) }
 
           timeout { sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT) until ready? image }
+
+          chmod image, Cloudkeeper::One::Settings[:'appliance-permissions']
+          chgrp image, group
 
           image
         end

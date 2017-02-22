@@ -6,6 +6,9 @@ module Cloudkeeper
       class ApplianceHandler < Handler
         attr_reader :identifier
 
+        LEAVE_ID_AS_IS = -1
+        ONEADMIN_ID = 0
+
         def initialize
           super
 
@@ -27,6 +30,16 @@ module Cloudkeeper
           handle_opennebula_error { element.delete }
 
           timeout { sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT) while exist? id }
+        end
+
+        def chmod(element, permissions)
+          handle_opennebula_error { element.chmod_octet permissions }
+        end
+
+        def chgrp(element, group)
+          handle_opennebula_error { element.info! }
+          group_id = group.id == element.gid ? LEAVE_ID_AS_IS : group.id
+          handle_opennebula_error { element.chown(LEAVE_ID_AS_IS, group_id) }
         end
 
         private
