@@ -8,6 +8,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     Cloudkeeper::One::Settings[:'opennebula-endpoint'] = 'http://localhost:2633/RPC2'
     Cloudkeeper::One::Settings[:identifier] = 'cloudkeeper-spec'
     Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'] = 10
+    Cloudkeeper::One::Settings[:'appliances-permissions'] = '646'
   end
 
   describe '#new' do
@@ -132,9 +133,18 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
 
     context 'with image', :vcr do
       it 'expires image' do
-        image = handler.find_by_id 7
+        image = handler.find_by_id 3
         handler.expire image
         expect(handler.expired?(image)).to be_truthy
+        expect(image['PERMISSIONS/OWNER_U']).to eq('1')
+        expect(image['PERMISSIONS/OWNER_M']).to eq('1')
+        expect(image['PERMISSIONS/OWNER_A']).to eq('0')
+        expect(image['PERMISSIONS/GROUP_U']).to eq('0')
+        expect(image['PERMISSIONS/GROUP_M']).to eq('0')
+        expect(image['PERMISSIONS/GROUP_A']).to eq('0')
+        expect(image['PERMISSIONS/OTHER_U']).to eq('0')
+        expect(image['PERMISSIONS/OTHER_M']).to eq('0')
+        expect(image['PERMISSIONS/OTHER_A']).to eq('0')
       end
     end
   end
@@ -142,16 +152,29 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
   describe '.register', :vcr do
     let(:image_template) { "NAME = \"cloudkeeper-spec-image\"\nPATH = \"/var/tmp/file.img\"" }
     let(:datastore) { Cloudkeeper::One::Opennebula::DatastoreHandler.new.find_by_id 1 }
+    let(:group) { Cloudkeeper::One::Opennebula::GroupHandler.new.find_by_id 100 }
 
     context 'with correct template' do
       it 'registers new image in OpenNebula' do
-        expect(handler.register(image_template, datastore)).not_to be_nil
+        image = handler.register(image_template, datastore, group)
+        expect(image).not_to be_nil
+        expect(image.gid).to eq(100)
+        expect(image['PERMISSIONS/OWNER_U']).to eq('1')
+        expect(image['PERMISSIONS/OWNER_M']).to eq('1')
+        expect(image['PERMISSIONS/OWNER_A']).to eq('0')
+        expect(image['PERMISSIONS/GROUP_U']).to eq('1')
+        expect(image['PERMISSIONS/GROUP_M']).to eq('0')
+        expect(image['PERMISSIONS/GROUP_A']).to eq('0')
+        expect(image['PERMISSIONS/OTHER_U']).to eq('1')
+        expect(image['PERMISSIONS/OTHER_M']).to eq('1')
+        expect(image['PERMISSIONS/OTHER_A']).to eq('0')
       end
     end
 
     context 'image is not ready within a timeout' do
       it 'raises ApiCallTimeoutError' do
-        expect { handler.register image_template, datastore }.to raise_error(Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError)
+        expect { handler.register image_template, datastore, group }.to \
+          raise_error(Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError)
       end
     end
   end
