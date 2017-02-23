@@ -9,7 +9,7 @@ module Cloudkeeper
           error: 'ERROR'
         }.freeze
 
-        EXPIRED_PERMISSIONS = '600'
+        EXPIRED_PERMISSIONS = '600'.freeze
 
         def initialize
           super
@@ -84,7 +84,7 @@ module Cloudkeeper
 
           timeout { sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT) until ready? image }
 
-          chmod image, Cloudkeeper::One::Settings[:'appliance-permissions']
+          chmod image, Cloudkeeper::One::Settings[:'appliances-permissions']
           chgrp image, group
 
           image

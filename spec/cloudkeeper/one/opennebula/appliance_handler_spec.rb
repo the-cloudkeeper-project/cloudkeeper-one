@@ -123,4 +123,62 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
       end
     end
   end
+
+  describe '.chmod' do
+    before do
+      handler.pool = OpenNebula::ImagePool.new handler.client
+    end
+
+    context 'with nil element' do
+      it 'raises ArgumentError' do
+        expect { handler.chmod nil, '467' }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+      end
+    end
+
+    context 'with element', :vcr do
+      it 'changes permissions on the element' do
+        element = handler.find_by_id 8
+        handler.chmod element, '467'
+        expect(element['PERMISSIONS/OWNER_U']).to eq('1')
+        expect(element['PERMISSIONS/OWNER_M']).to eq('0')
+        expect(element['PERMISSIONS/OWNER_A']).to eq('0')
+        expect(element['PERMISSIONS/GROUP_U']).to eq('1')
+        expect(element['PERMISSIONS/GROUP_M']).to eq('1')
+        expect(element['PERMISSIONS/GROUP_A']).to eq('0')
+        expect(element['PERMISSIONS/OTHER_U']).to eq('1')
+        expect(element['PERMISSIONS/OTHER_M']).to eq('1')
+        expect(element['PERMISSIONS/OTHER_A']).to eq('1')
+      end
+    end
+  end
+
+  describe '.chgrp', :vcr do
+    before do
+      handler.pool = OpenNebula::ImagePool.new handler.client
+    end
+
+    let(:group) { Cloudkeeper::One::Opennebula::GroupHandler.new.find_by_id 100 }
+
+    context 'with nil element' do
+      it 'raises ArgumentError' do
+        expect { handler.chgrp nil, group }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+      end
+    end
+
+    context 'with element with the same group' do
+      it 'will keep the same group' do
+        element = handler.find_by_id 5
+        handler.chgrp element, group
+        expect(element.gid).to eq(100)
+      end
+    end
+
+    context 'with element with different group' do
+      it 'changes element\'s group to specified group' do
+        element = handler.find_by_id 6
+        handler.chgrp element, group
+        expect(element.gid).to eq(100)
+      end
+    end
+  end
 end

@@ -5,6 +5,47 @@ http_interactions:
     uri: http://localhost:2633/RPC2
     body:
       encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.grouppool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '174'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2689'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;GROUP_POOL&gt;&lt;GROUP&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;NAME&gt;oneadmin&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;GROUP&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;NAME&gt;users&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;SUNSTONE&gt;&lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;&lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;&lt;/SUNSTONE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;GROUP&gt;&lt;ID&gt;100&lt;/ID&gt;&lt;NAME&gt;rspec-group&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;SUNSTONE&gt;&lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;&lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;&lt;/SUNSTONE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;100&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;DATASTORE&gt;&lt;ID&gt;&lt;![CDATA[1]]&gt;&lt;/ID&gt;&lt;IMAGES&gt;&lt;![CDATA[-1]]&gt;&lt;/IMAGES&gt;&lt;IMAGES_USED&gt;&lt;![CDATA[1]]&gt;&lt;/IMAGES_USED&gt;&lt;SIZE&gt;&lt;![CDATA[-1]]&gt;&lt;/SIZE&gt;&lt;SIZE_USED&gt;&lt;![CDATA[1]]&gt;&lt;/SIZE_USED&gt;&lt;/DATASTORE&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;DEFAULT_GROUP_QUOTAS&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/DEFAULT_GROUP_QUOTAS&gt;&lt;/GROUP_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
       string: '<?xml version="1.0" ?><methodCall><methodName>one.template.allocate</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><string>NAME
         = "cloudkeeper-spec-template"</string></value></param></params></methodCall>
 
@@ -30,16 +71,221 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '251'
+      - '252'
       Connection:
       - close
       Date:
-      - Sun, 19 Feb 2017 12:41:29 UTC
+      - Wed, 22 Feb 2017 23:46:13 UTC
       Server:
       - Xmlrpc-c_Abyss/1.40.0
     body:
       encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>9</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>12</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
     http_version: 
-  recorded_at: Sun, 19 Feb 2017 11:54:52 GMT
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.chmod</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>12</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '625'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>12</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>12</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '887'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;12&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-template&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487807173&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>12</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '887'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;12&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-template&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487807173&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.chown</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>12</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>100</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '298'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>12</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>12</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '892'
+      Connection:
+      - close
+      Date:
+      - Wed, 22 Feb 2017 23:46:13 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;12&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;100&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;rspec-group&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-template&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487807173&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 22:46:15 GMT
 recorded_with: VCR 3.0.3

@@ -13,7 +13,7 @@ module Cloudkeeper
 
           handle_opennebula_error { template.allocate(template_template) }
 
-          chmod template, Cloudkeeper::One::Settings[:'appliance-permissions']
+          chmod template, Cloudkeeper::One::Settings[:'appliances-permissions']
           chgrp template, group
 
           template

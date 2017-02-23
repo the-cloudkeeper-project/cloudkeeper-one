@@ -33,13 +33,24 @@ module Cloudkeeper
         end
 
         def chmod(element, permissions)
-          handle_opennebula_error { element.chmod_octet permissions }
+          raise Cloudkeeper::One::Errors::ArgumentError, 'element cannot be nil' unless element
+
+          handle_opennebula_error do
+            element.chmod_octet permissions
+            element.info!
+          end
         end
 
         def chgrp(element, group)
+          raise Cloudkeeper::One::Errors::ArgumentError, 'element cannot be nil' unless element
+
           handle_opennebula_error { element.info! }
-          group_id = group.id == element.gid ? LEAVE_ID_AS_IS : group.id
-          handle_opennebula_error { element.chown(LEAVE_ID_AS_IS, group_id) }
+          return if group.id == element.gid
+
+          handle_opennebula_error do
+            element.chown(LEAVE_ID_AS_IS, group.id)
+            element.info!
+          end
         end
 
         private
