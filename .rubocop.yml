@@ -8,6 +8,8 @@ AllCops:
 
 Metrics/LineLength:
   Max: 135
+  Exclude:
+    - 'lib/cloudkeeper/one/appliance_actions/list.rb'
 
 Style/Documentation:
   Enabled: false
@@ -17,6 +19,8 @@ Metrics/MethodLength:
 
 Metrics/AbcSize:
   Max: 20
+  Exclude:
+    - 'lib/cloudkeeper/one/appliance_actions/list.rb'
 
 Metrics/ClassLength:
   Max: 120
