@@ -1,0 +1,23 @@
+<%= Cloudkeeper::One::Opennebula::Tags::ID %> = "<%= Cloudkeeper::One::Settings[:identifier] %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ID %> = "<%= appliance.identifier %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_TITLE %> = "<%= appliance.title %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_DESCRIPTION %> = "<%= appliance.description %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_MPURI %> = "<%= appliance.mpuri %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_GROUP %> = "<%= appliance.group %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_RAM %> = "<%= appliance.ram %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_CORE %> = "<%= appliance.core %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_VERSION %> = "<%= appliance.version %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ARCHITECTURE %> = "<%= appliance.architecture %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_OPERATING_SYSTEM %> = "<%= appliance.operating_system %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_VO %> = "<%= appliance.vo %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_EXPIRATION_DATE %> = "<%= appliance.expiration_date %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_IMAGE_LIST_ID %> = "<%= appliance.image_list_identifier %>"
+
+<% if image %>
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_URI %> = "<%= image.uri %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_CHECKSUM %> = "<%= image.checksum %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_SIZE %> = "<%= image.size %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_FORMAT %> = "<%= image.format %>"
+<% end %>
+
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ATTRIBUTES %> = "<%= Base64.strict_encode64 appliance.attributes.to_h.to_json %>"

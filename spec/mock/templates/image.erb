@@ -1,0 +1,8 @@
+NAME = "<%= name %>"
+DESCRIPTION = "<%= appliance.title %>"
+TYPE = "OS"
+<% if image %>
+DISK_TYPE = "BLOCK"
+PATH = "<%= image.location %>"
+DRIVER = "raw"
+<% end %>

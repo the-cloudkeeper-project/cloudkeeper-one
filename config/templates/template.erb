@@ -1,0 +1,19 @@
+NAME = "<%= name %>"
+
+<% if appliance.description %>
+DESCRIPTION = "<%= "#{appliance.title} - #{appliance.description}" %>"
+<% else %>
+DESCRIPTION = "<%= appliance.title %>"
+<% end %>
+
+MEMORY = "<%= appliance.ram || 1024 %>"
+CPU = "<%= appliance.core || 0.25 %>"
+VCPU = "<%= appliance.core || 1 %>"
+
+OS = [
+ARCH = "<%= appliance.architecture || "x86_64" %>"
+]
+
+DISK = [
+IMAGE_ID = "<%= image_id %>"
+]
