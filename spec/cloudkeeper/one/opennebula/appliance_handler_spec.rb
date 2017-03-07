@@ -19,7 +19,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     end
   end
 
-  describe '.list', :vcr do
+  describe '.find_by_appliance_id', :vcr do
     before do
       handler.pool = OpenNebula::ImagePool.new handler.client
     end
@@ -31,7 +31,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
         end
 
         it 'returns all elements with specified appliance id, with specified identifier and owned by one of the users' do
-          elements = handler.list '222'
+          elements = handler.find_by_appliance_id '222'
           expect(elements.count).to eq(2)
           expect(elements.first.name).to eq('ttylinux03')
           expect(elements.last.name).to eq('ttylinux05')
@@ -44,7 +44,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
         end
 
         it 'returns all elements with specified appliance id and with specified identifier' do
-          elements = handler.list '222'
+          elements = handler.find_by_appliance_id '222'
           expect(elements.count).to eq(2)
           expect(elements.first.name).to eq('ttylinux02')
           expect(elements.last.name).to eq('ttylinux03')
@@ -54,7 +54,47 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
 
     context 'with nonexisting appliance id' do
       it 'returns an empty array' do
-        expect(handler.list('nonexisting-appliance-id')).to be_empty
+        expect(handler.find_by_appliance_id('nonexisting-appliance-id')).to be_empty
+      end
+    end
+  end
+
+  describe '.find_by_image_list_id', :vcr do
+    before do
+      handler.pool = OpenNebula::ImagePool.new handler.client
+    end
+
+    context 'with existing image list id' do
+      context 'with users option set' do
+        before do
+          Cloudkeeper::One::Settings[:'opennebula-users'] = %w(user kile)
+        end
+
+        it 'returns all elements with specified image list id, with specified identifier and owned by one of the users' do
+          elements = handler.find_by_image_list_id '222'
+          expect(elements.count).to eq(2)
+          expect(elements.first.name).to eq('ttylinux03')
+          expect(elements.last.name).to eq('ttylinux05')
+        end
+      end
+
+      context 'without users options sets' do
+        before do
+          Cloudkeeper::One::Settings[:'opennebula-users'] = nil
+        end
+
+        it 'returns all elements with specified image list id and with specified identifier' do
+          elements = handler.find_by_image_list_id '222'
+          expect(elements.count).to eq(3)
+          expect(elements.first.name).to eq('ttylinux03')
+          expect(elements.last.name).to eq('ttylinux05')
+        end
+      end
+    end
+
+    context 'with nonexisting image list id' do
+      it 'returns an empty array' do
+        expect(handler.find_by_image_list_id('nonexisting-image-list-id')).to be_empty
       end
     end
   end
@@ -178,6 +218,28 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
         element = handler.find_by_id 6
         handler.chgrp element, group
         expect(element.gid).to eq(100)
+      end
+    end
+  end
+
+  describe '.update', :vcr do
+    before do
+      handler.pool = OpenNebula::ImagePool.new handler.client
+    end
+
+    let(:template) { 'NEW_ELEMENT = "lalala"' }
+    let(:element) { handler.find_by_id 23 }
+
+    context 'with nil element' do
+      it 'raises ArgumentError' do
+        expect { handler.update nil, template }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+      end
+    end
+
+    context 'with element' do
+      it 'updates element\'s template' do
+        handler.update element, template
+        expect(element['TEMPLATE/NEW_ELEMENT']).to eq('lalala')
       end
     end
   end
