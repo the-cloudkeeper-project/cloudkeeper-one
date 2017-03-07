@@ -1,0 +1,1324 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '5270'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[lalala]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;14&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux01&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488650095&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488650103&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.delete</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>14</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '266'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>14</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3613'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[lalala]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488650103&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.delete</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>15</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '266'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>15</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1956'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[lalala]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '5186'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642674&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;NEW_ELEMENT&gt;&lt;![CDATA[lalala]]&gt;&lt;/NEW_ELEMENT&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2000'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.chmod</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '572'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>27</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2000'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2000'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2000'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.enable</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '263'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>27</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2000'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;3&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.rename</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param><param><value><string>EXPIRED_1488646586_ttylinux04</string></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '289'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>27</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.update</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param><param><value><string>CLOUDKEEPER_EXPIRED
+        = "yes"</string></value></param><param><value><i4>1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '327'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>27</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2095'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;27&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;EXPIRED_1488646586_ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642826&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/a11ccaa800a8bf268222f386436b00fc]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;3&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_EXPIRED&gt;&lt;![CDATA[yes]]&gt;&lt;/CLOUDKEEPER_EXPIRED&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.delete</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>27</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:24 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>27</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:26 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3444'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642674&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;NEW_ELEMENT&gt;&lt;![CDATA[lalala]]&gt;&lt;/NEW_ELEMENT&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1996'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.chmod</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '572'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>28</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1996'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1996'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1996'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.enable</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '263'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>28</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1996'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;3&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.rename</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param><param><value><string>EXPIRED_1488646591_ttylinux05</string></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '289'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>28</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.update</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param><param><value><string>CLOUDKEEPER_EXPIRED
+        = "yes"</string></value></param><param><value><i4>1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '327'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>28</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2091'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;28&lt;/ID&gt;&lt;UID&gt;2&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;user&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;EXPIRED_1488646591_ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642831&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/b2103fd3852ce2e7b7e65e230d45423a]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;3&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_EXPIRED&gt;&lt;![CDATA[yes]]&gt;&lt;/CLOUDKEEPER_EXPIRED&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.delete</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>28</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:29 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>28</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:31 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1706'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:34 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642674&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;NEW_ELEMENT&gt;&lt;![CDATA[lalala]]&gt;&lt;/NEW_ELEMENT&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:36 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1706'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:34 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488642674&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/4e7ab4420a1c19cc2a14c76ef9f7ba46]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;NEW_ELEMENT&gt;&lt;![CDATA[lalala]]&gt;&lt;/NEW_ELEMENT&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:36 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1956'
+      Connection:
+      - close
+      Date:
+      - Sat, 04 Mar 2017 17:56:34 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[000]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[lalala]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Sat, 04 Mar 2017 16:56:36 GMT
+recorded_with: VCR 3.0.3

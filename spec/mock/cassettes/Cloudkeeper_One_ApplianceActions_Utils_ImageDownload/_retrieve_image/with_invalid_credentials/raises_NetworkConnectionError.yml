@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9292/image.ext
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:9292
+      Authorization:
+      - Basic Y2xvdWRrZWVwZXI6Y2xvdWRrZWVwZXI=
+  response:
+    status:
+      code: 401
+      message: 'Unauthorized '
+    headers:
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.3.3/2016-11-21)
+      Date:
+      - Tue, 28 Feb 2017 08:42:58 GMT
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 28 Feb 2017 08:42:58 GMT
+recorded_with: VCR 3.0.3
