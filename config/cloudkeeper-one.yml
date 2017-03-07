@@ -10,7 +10,6 @@ cloudkeeper-one:
     endpoint: http://localhost:2633/RPC2 # If not specified, looking for endpoint in environment variable ONE_XMLRPC and file ~/.one/one_endpoint
     datastores: # Array of OpenNebula datastores images will be uploaded to
       - default
-    groups: # Array of groups. If set, groups from image list will be ignored and these groups will be used instead
     users: # Handle only images/templates of specified users
     api-call-timeout: 3h # How long will cloudkeeper-one wait for image/template operations to finish in OpenNebula
   logging:

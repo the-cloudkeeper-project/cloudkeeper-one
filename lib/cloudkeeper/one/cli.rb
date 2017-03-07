@@ -59,11 +59,6 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['opennebula']['datastores'],
                     type: :array,
                     desc: 'OpenNebula datastores images will be uploaded to'
-      method_option :'opennebula-groups',
-                    required: false,
-                    default: Cloudkeeper::One::Settings['opennebula']['groups'],
-                    type: :array,
-                    desc: 'If set, appliances will be registered under these groups instead of the one from image list'
       method_option :'opennebula-users',
                     required: false,
                     default: Cloudkeeper::One::Settings['opennebula']['users'],
@@ -104,7 +99,7 @@ module Cloudkeeper
         Cloudkeeper::One::Settings.clear
         Cloudkeeper::One::Settings.merge! options.to_hash
 
-        gem_dir = File.realdirpath(File.join(File.dirname(__FILE__), '..'))
+        gem_dir = File.realdirpath(File.join(File.dirname(__FILE__), '..', '..', '..'))
         Cloudkeeper::One::Settings[:'appliances-template-dir'] = File.join(gem_dir, 'config', 'templates') \
           unless Cloudkeeper::One::Settings[:'appliances-template-dir']
         Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'] = \
