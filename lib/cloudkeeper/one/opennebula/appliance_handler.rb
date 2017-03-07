@@ -15,12 +15,12 @@ module Cloudkeeper
           @identifier = Cloudkeeper::One::Settings[:identifier]
         end
 
-        def list(appliance_id)
-          xpaths = { "TEMPLATE/#{Tags::APPLIANCE_ID}" => appliance_id }
-          xpaths['UNAME'] = Cloudkeeper::One::Settings[:'opennebula-users'] \
-            if Cloudkeeper::One::Settings[:'opennebula-users'] && !Cloudkeeper::One::Settings[:'opennebula-users'].empty?
+        def find_by_appliance_id(appliance_id)
+          find_all_by "TEMPLATE/#{Tags::APPLIANCE_ID}" => appliance_id
+        end
 
-          find_all xpaths
+        def find_by_image_list_id(image_list_id)
+          find_all_by "TEMPLATE/#{Tags::APPLIANCE_IMAGE_LIST_ID}" => image_list_id
         end
 
         def delete(element)
@@ -41,6 +41,15 @@ module Cloudkeeper
           end
         end
 
+        def update(element, template)
+          raise Cloudkeeper::One::Errors::ArgumentError, 'element cannot be nil' unless element
+
+          handle_opennebula_error do
+            element.update template, true
+            element.info!
+          end
+        end
+
         def chgrp(element, group)
           raise Cloudkeeper::One::Errors::ArgumentError, 'element cannot be nil' unless element
 
@@ -54,6 +63,14 @@ module Cloudkeeper
         end
 
         private
+
+        def find_all_by(attributes)
+          xpaths = attributes.clone
+          xpaths['UNAME'] = Cloudkeeper::One::Settings[:'opennebula-users'] \
+            if Cloudkeeper::One::Settings[:'opennebula-users'] && !Cloudkeeper::One::Settings[:'opennebula-users'].empty?
+
+          find_all xpaths
+        end
 
         def timeout
           Timeout.timeout(Cloudkeeper::One::Settings[:'opennebula-api-call-timeout']) { yield }

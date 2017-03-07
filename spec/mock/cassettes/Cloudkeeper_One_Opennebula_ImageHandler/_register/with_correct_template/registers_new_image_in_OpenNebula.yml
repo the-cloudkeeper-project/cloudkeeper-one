@@ -39,7 +39,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;DATASTORE_POOL&gt;&lt;DATASTORE&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;system&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[-]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/0]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;1&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;0&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;0&lt;/FREE_MB&gt;&lt;USED_MB&gt;0&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[FILE]]&gt;&lt;/DISK_TYPE&gt;&lt;DS_MIGRATE&gt;&lt;![CDATA[YES]]&gt;&lt;/DS_MIGRATE&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;SHARED&gt;&lt;![CDATA[NO]]&gt;&lt;/SHARED&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[SYSTEM_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;DATASTORE&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;default&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;9207&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;7164&lt;/FREE_MB&gt;&lt;USED_MB&gt;1553&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;ID&gt;5&lt;/ID&gt;&lt;ID&gt;6&lt;/ID&gt;&lt;ID&gt;7&lt;/ID&gt;&lt;ID&gt;8&lt;/ID&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;CLONE_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/CLONE_TARGET&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[FILE]]&gt;&lt;/DISK_TYPE&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;LN_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/LN_TARGET&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[IMAGE_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;DATASTORE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;files&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/2]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;2&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;9207&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;7164&lt;/FREE_MB&gt;&lt;USED_MB&gt;1553&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;CLONE_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/CLONE_TARGET&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;LN_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/LN_TARGET&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[FILE_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;/DATASTORE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:50 GMT
 - request:
     method: post
@@ -80,7 +80,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;GROUP_POOL&gt;&lt;GROUP&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;NAME&gt;oneadmin&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;GROUP&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;NAME&gt;users&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;SUNSTONE&gt;&lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;&lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;&lt;/SUNSTONE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;GROUP&gt;&lt;ID&gt;100&lt;/ID&gt;&lt;NAME&gt;rspec-group&lt;/NAME&gt;&lt;TEMPLATE&gt;&lt;SUNSTONE&gt;&lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;&lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;&lt;/SUNSTONE&gt;&lt;/TEMPLATE&gt;&lt;USERS&gt;&lt;/USERS&gt;&lt;ADMINS&gt;&lt;/ADMINS&gt;&lt;/GROUP&gt;&lt;QUOTAS&gt;&lt;ID&gt;100&lt;/ID&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/QUOTAS&gt;&lt;DEFAULT_GROUP_QUOTAS&gt;&lt;DATASTORE_QUOTA&gt;&lt;/DATASTORE_QUOTA&gt;&lt;NETWORK_QUOTA&gt;&lt;/NETWORK_QUOTA&gt;&lt;VM_QUOTA&gt;&lt;/VM_QUOTA&gt;&lt;IMAGE_QUOTA&gt;&lt;/IMAGE_QUOTA&gt;&lt;/DEFAULT_GROUP_QUOTAS&gt;&lt;/GROUP_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:50 GMT
 - request:
     method: post
@@ -121,48 +121,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>15</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
-  recorded_at: Wed, 22 Feb 2017 22:45:50 GMT
-- request:
-    method: post
-    uri: http://localhost:2633/RPC2
-    body:
-      encoding: UTF-8
-      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>15</i4></value></param></params></methodCall>
-
-'
-    headers:
-      User-Agent:
-      - XMLRPC::Client (Ruby 2.3.3)
-      Content-Type:
-      - text/xml; charset=utf-8
-      Content-Length:
-      - '211'
-      Connection:
-      - close
-      Accept-Encoding:
-      - identity
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - text/xml; charset=utf-8
-      Content-Length:
-      - '1618'
-      Connection:
-      - close
-      Date:
-      - Wed, 22 Feb 2017 23:45:48 UTC
-      Server:
-      - Xmlrpc-c_Abyss/1.40.0
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-image&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487807148&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;4&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:50 GMT
 - request:
     method: post
@@ -203,7 +162,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-image&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487807148&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8581455f10f821161f4dc4843a6b4421]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 - request:
     method: post
@@ -244,7 +203,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>15</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 - request:
     method: post
@@ -285,7 +244,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-image&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487807148&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8581455f10f821161f4dc4843a6b4421]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 - request:
     method: post
@@ -326,7 +285,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-image&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487807148&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8581455f10f821161f4dc4843a6b4421]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 - request:
     method: post
@@ -367,7 +326,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>15</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 - request:
     method: post
@@ -408,6 +367,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;15&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;100&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;rspec-group&lt;/GNAME&gt;&lt;NAME&gt;cloudkeeper-spec-image&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1487807148&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8581455f10f821161f4dc4843a6b4421]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Wed, 22 Feb 2017 22:45:55 GMT
 recorded_with: VCR 3.0.3
