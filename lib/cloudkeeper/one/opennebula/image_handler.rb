@@ -82,7 +82,12 @@ module Cloudkeeper
 
           handle_opennebula_error { image.allocate(image_template, datastore.id) }
 
-          timeout { sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT) until ready? image }
+          timeout do
+            until ready? image
+              raise Cloudkeeper::One::Errors::Opennebula::ResourceStateError, image['TEMPLATE/ERROR'] if error? image
+              sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT)
+            end
+          end
 
           chmod image, Cloudkeeper::One::Settings[:'appliances-permissions']
           chgrp image, group
@@ -108,6 +113,10 @@ module Cloudkeeper
 
         def free?(image)
           is?(image) { image.state_str == IMAGE_STATES[:ready] || image.state_str == IMAGE_STATES[:error] }
+        end
+
+        def error?(image)
+          is?(image) { image.state_str == IMAGE_STATES[:error] }
         end
 
         private

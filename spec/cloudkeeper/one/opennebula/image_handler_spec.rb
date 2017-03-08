@@ -177,6 +177,13 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
           raise_error(Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError)
       end
     end
+
+    context 'image goes into error state' do
+      it 'raises ResourceStateError' do
+        expect { handler.register image_template, datastore, group }.to \
+          raise_error(Cloudkeeper::One::Errors::Opennebula::ResourceStateError)
+      end
+    end
   end
 
   describe 'expired?', :vcr do
