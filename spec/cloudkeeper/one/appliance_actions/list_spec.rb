@@ -25,13 +25,20 @@ describe Cloudkeeper::One::ApplianceActions::List do
   describe '.list_image_lists', :vcr do
     context 'with some templates missing image list identifier' do
       it 'skips templates without image list identifier ale returns rest of the found image list identifiers' do
-        expect(list.list_image_lists).to eq(%w(111 222 333))
+        image_lists = list.list_image_lists
+        expect(image_lists[0].image_list_identifier).to eq('111')
+        expect(image_lists[1].image_list_identifier).to eq('222')
+        expect(image_lists[2].image_list_identifier).to eq('333')
       end
     end
 
     context 'with all templates with image list identifiers' do
       it 'returns all found image list identifiers' do
-        expect(list.list_image_lists).to eq(%w(111 222 333 444))
+        image_lists = list.list_image_lists
+        expect(image_lists[0].image_list_identifier).to eq('111')
+        expect(image_lists[1].image_list_identifier).to eq('222')
+        expect(image_lists[2].image_list_identifier).to eq('333')
+        expect(image_lists[3].image_list_identifier).to eq('444')
       end
     end
   end

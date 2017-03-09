@@ -5,12 +5,15 @@ module Cloudkeeper
         include Utils::ImageDownload
         include Utils::TemplatePreparation
         include Cloudkeeper::One::ApplianceActions::Update
+        include Cloudkeeper::One::ApplianceActions::Removal
 
         def register_or_update_appliance(proto_appliance)
           raise Cloudkeeper::One::Errors::ArgumentError, 'appliance cannot be nil' unless proto_appliance
 
           group = group_handler.find_by_name proto_appliance.vo
           raise Cloudkeeper::One::Errors::Actions::RegistrationError, "Missing group with name #{proto_appliance.vo}" unless group
+
+          remove_images :find_by_appliance_id, proto_appliance.identifier
 
           datastores = datastore_handler.find_by_names Cloudkeeper::One::Settings[:'opennebula-datastores']
           datastores.each do |datastore|
