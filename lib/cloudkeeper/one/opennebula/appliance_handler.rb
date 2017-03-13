@@ -73,6 +73,8 @@ module Cloudkeeper
         end
 
         def timeout
+          raise Cloudkeeper::One::Errors::ArgumentError, 'Timeout called without a block!' unless block_given?
+
           Timeout.timeout(Cloudkeeper::One::Settings[:'opennebula-api-call-timeout']) { yield }
         rescue Timeout::Error
           raise Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError, 'Operation was not successful within the timeout'

@@ -13,20 +13,36 @@ module Cloudkeeper
         end
 
         def remove_expired
-          image_handler.expired.each { |image| image_handler.delete image }
+          handle_iteration(image_handler.expired) { |item| image_handler.delete item }
         end
 
         def remove_templates(method, value)
-          templates = template_handler.send(method, value)
-          templates.each { |template| template_handler.delete template }
+          handle_iteration(template_handler.send(method, value)) { |item| template_handler.delete item }
         end
 
         def remove_images(method, value)
-          images = image_handler.send(method, value)
-          images.each do |image|
-            image_handler.expire image
-            image_handler.delete image
+          handle_iteration(image_handler.send(method, value)) do |item|
+            image_handler.expire item
+            image_handler.delete item
           end
+        end
+
+        private
+
+        def handle_iteration(items)
+          raise Cloudkeeper::One::Errors::ArgumentError, 'Iteration error handler was called without a block!' unless block_given?
+
+          error = nil
+          items.each do |item|
+            begin
+              yield item
+            rescue Cloudkeeper::One::Errors::StandardError => ex
+              error = ex
+              next
+            end
+          end
+
+          raise error if error
         end
       end
     end

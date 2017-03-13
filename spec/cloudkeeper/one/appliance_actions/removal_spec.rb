@@ -132,4 +132,30 @@ describe Cloudkeeper::One::ApplianceActions::Removal do
       end
     end
   end
+
+  describe '.handle_iteration' do
+    context 'with a block' do
+      context 'with errors' do
+        it 'iterates over all items and raises error at the end' do
+          expect do
+            removal.send(:handle_iteration, [5, 2, 1]) { |item| raise Cloudkeeper::One::Errors::ArgumentError if item == 5 }
+          end.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+        end
+      end
+
+      context 'withotu errors' do
+        it 'iterates over all items' do
+          expect do
+            removal.send(:handle_iteration, [1, 2, 3]) { |item| raise Cloudkeeper::One::Errors::ArgumentError if item == 5 }
+          end.not_to raise_error
+        end
+      end
+    end
+
+    context 'without a block' do
+      it 'raises ArgumentError' do
+        expect { removal.send(:handle_iteration, []) }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+      end
+    end
+  end
 end
