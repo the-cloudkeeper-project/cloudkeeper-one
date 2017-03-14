@@ -3,16 +3,21 @@ module Cloudkeeper
     module ApplianceActions
       module Removal
         def remove_appliance(appliance_id)
+          logger.debug "Removing templates for appliance #{appliance_id.inspect}"
           remove_templates :find_by_appliance_id, appliance_id
+          logger.debug "Removing images for appliance #{appliance_id.inspect}"
           remove_images :find_by_appliance_id, appliance_id
         end
 
         def remove_image_list(image_list_id)
+          logger.debug "Removing templates for image list #{image_list_id.inspect}"
           remove_templates :find_by_image_list_id, image_list_id
+          logger.debug "Removing images for image list #{image_list_id.inspect}"
           remove_images :find_by_image_list_id, image_list_id
         end
 
         def remove_expired
+          logger.debug 'Removing expired images...'
           handle_iteration(image_handler.expired) { |item| image_handler.delete item }
         end
 

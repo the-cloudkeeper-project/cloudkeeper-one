@@ -43,12 +43,12 @@ module Cloudkeeper
           id = image.id
 
           if disabled? image
-            logger.info("Image with id #{id.inspect} is already disabled, skipping")
+            logger.info "Image with id #{id.inspect} is already disabled, skipping"
             return
           end
 
           unless free? image
-            logger.warn("Image with id #{id.inspect} cannot be disabled")
+            logger.warn "Image with id #{id.inspect} cannot be disabled"
             return
           end
 

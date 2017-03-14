@@ -6,9 +6,11 @@ module Cloudkeeper
       module Utils
         module ImageDownload
           def download_image(uri, username, password)
+            logger.debug "Downloading image from #{uri.inspect} (username: #{username}, password: #{password})"
             filename = generate_filename
             retrieve_image URI.parse(uri), username, password, filename
 
+            logger.debug "Image stored into #{filename}"
             filename
           rescue URI::InvalidURIError => ex
             raise Cloudkeeper::One::Errors::NetworkConnectionError, ex
