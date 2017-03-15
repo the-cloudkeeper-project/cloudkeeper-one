@@ -3,6 +3,7 @@ module Cloudkeeper
     module ApplianceActions
       module List
         def list_image_lists
+          logger.debug 'Listing all image lists available in OpenNebula'
           template_handler.find_all.map do |template|
             image_list_identifier = template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_IMAGE_LIST_ID}"]
             unless image_list_identifier
@@ -14,6 +15,7 @@ module Cloudkeeper
         end
 
         def list_appliances(image_list_id)
+          logger.debug "Listing appliances with image list id #{image_list_id.inspect}"
           templates = template_handler.find_by_image_list_id image_list_id
           templates.uniq! { |template| template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ID}"] }
 

@@ -9,7 +9,7 @@ module Cloudkeeper
                              ::OpenNebula::Error::EACTION => Cloudkeeper::One::Errors::Opennebula::ResourceStateError).freeze
 
         def handle_opennebula_error
-          raise Cloudkeeper::One::Errors::Opennebula::StubError, 'OpenNebula service-wrapper was called without a block!' \
+          raise Cloudkeeper::One::Errors::ArgumentError, 'OpenNebula service-wrapper was called without a block!' \
             unless block_given?
 
           return_value = yield

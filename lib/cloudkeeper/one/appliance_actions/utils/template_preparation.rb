@@ -11,19 +11,23 @@ module Cloudkeeper
             raise Cloudkeeper::One::Errors::ArgumentError, "Missing file #{filename.inspect} in template directory" \
               unless File.exist?(template_file)
 
+            logger.debug "Populating template from #{template_file}"
             templates = [template_file, File.join(File.dirname(__FILE__), 'templates', 'attributes.erb')]
 
-            rendered = nil
             data[:image] ||= nil
+            rendered = render_templates templates, data
+            logger.debug "Template:\n#{rendered}"
+            rendered
+          end
+
+          def render_templates(templates, data)
             Tempfile.open 'cloudkeeper-template' do |tmp|
               templates.each { |template| tmp.write(File.read(template)) }
               tmp.flush
 
               template = Tilt::ERBTemplate.new tmp
-              rendered = template.render Object.new, data
+              template.render Object.new, data
             end
-
-            rendered
           end
         end
       end
