@@ -139,7 +139,7 @@ describe Cloudkeeper::One::ApplianceActions::Removal do
         it 'iterates over all items and raises error at the end' do
           expect do
             removal.send(:handle_iteration, [5, 2, 1]) { |item| raise Cloudkeeper::One::Errors::ArgumentError if item == 5 }
-          end.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+          end.to raise_error(Cloudkeeper::One::Errors::MultiError)
         end
       end
 

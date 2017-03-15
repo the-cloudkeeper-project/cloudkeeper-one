@@ -42,7 +42,9 @@ module Cloudkeeper
             begin
               yield item
             rescue Cloudkeeper::One::Errors::StandardError => ex
-              error = ex
+              error ||= Cloudkeeper::One::Errors::MultiError.new
+              error << ex
+              logger.error ex.message
               next
             end
           end
