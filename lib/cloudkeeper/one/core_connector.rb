@@ -17,7 +17,7 @@ module Cloudkeeper
                                        Cloudkeeper::One::Errors::Actions::RegistrationError => :ERROR_RESOURCE_NOT_FOUND,
                                        Cloudkeeper::One::Errors::Opennebula::ResourceRetrievalError => :ERROR_RESOURCE_RETRIEVAL,
                                        Cloudkeeper::One::Errors::Opennebula::ResourceStateError => :ERROR_RESOURCE_STATE,
-                                       Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError => :ERROR_RESOURCE_STATE)
+                                       Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError => :ERROR_RESOURCE_STATE).freeze
 
       def initialize
         super
@@ -75,10 +75,9 @@ module Cloudkeeper
         raise Cloudkeeper::One::Errors::ArgumentError, 'Error handler was called without a block!' unless block_given?
 
         yield
+        CloudkeeperGrpc::Status.new(code: :SUCCESS, message: '')
       rescue Cloudkeeper::One::Errors::StandardError => ex
         CloudkeeperGrpc::Status.new(code: ERRORS[ex.class], message: ex.message)
-      else
-        CloudkeeperGrpc::Status.new(code: :SUCCESS, message: '')
       end
     end
   end
