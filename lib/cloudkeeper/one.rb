@@ -10,9 +10,10 @@ module Cloudkeeper
     autoload :Opennebula, 'cloudkeeper/one/opennebula'
     autoload :ApplianceActions, 'cloudkeeper/one/appliance_actions'
 
-    autoload :Version, 'cloudkeeper/one/version'
     autoload :CLI, 'cloudkeeper/one/cli'
     autoload :Settings, 'cloudkeeper/one/settings'
     autoload :CoreConnector, 'cloudkeeper/one/core_connector'
   end
 end
+
+require 'cloudkeeper/one/version'
