@@ -80,7 +80,7 @@ module Cloudkeeper
         raise Cloudkeeper::One::Errors::ArgumentError, 'Error handler was called without a block!' unless block_given?
 
         return_value = handle_errors(call) { yield }
-        finilize_return_value(return_value, default_return_value, use_return_value)
+        finalize_return_value(return_value, default_return_value, use_return_value)
       end
 
       def handle_errors(call)
@@ -96,7 +96,7 @@ module Cloudkeeper
         return_value
       end
 
-      def finilize_return_value(return_value, default_return_value, use_return_value)
+      def finalize_return_value(return_value, default_return_value, use_return_value)
         return_value = use_return_value ? return_value : default_return_value
 
         return_value
