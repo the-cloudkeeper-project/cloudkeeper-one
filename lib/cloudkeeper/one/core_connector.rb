@@ -8,16 +8,18 @@ module Cloudkeeper
       include Cloudkeeper::One::ApplianceActions::Update
       include Cloudkeeper::One::ApplianceActions::List
 
-      ERRORS = Hash.new(:ERROR).update(Cloudkeeper::One::Errors::Actions::ListingError => :ERROR_APPLIANCE_NOT_FOUND,
-                                       Cloudkeeper::One::Errors::Actions::UpdateError => :ERROR_APPLIANCE_NOT_FOUND,
-                                       Cloudkeeper::One::Errors::NetworkConnectionError => :ERROR_APPLIANCE_TRANSFER,
-                                       Cloudkeeper::One::Errors::Opennebula::AuthenticationError => :ERROR_AUTHENTICATION,
-                                       Cloudkeeper::One::Errors::Opennebula::UserNotAuthorizedError => :ERROR_USER_NOT_AUTHORIZED,
-                                       Cloudkeeper::One::Errors::Opennebula::ResourceNotFoundError => :ERROR_RESOURCE_NOT_FOUND,
-                                       Cloudkeeper::One::Errors::Actions::RegistrationError => :ERROR_RESOURCE_NOT_FOUND,
-                                       Cloudkeeper::One::Errors::Opennebula::ResourceRetrievalError => :ERROR_RESOURCE_RETRIEVAL,
-                                       Cloudkeeper::One::Errors::Opennebula::ResourceStateError => :ERROR_RESOURCE_STATE,
-                                       Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError => :ERROR_RESOURCE_STATE).freeze
+      ERRORS = Hash.new(CloudkeeperGrpc::Constants::STATUS_ERROR).update(
+        Cloudkeeper::One::Errors::Actions::ListingError => CloudkeeperGrpc::Constants::STATUS_ERROR_APPLIANCE_NOT_FOUND,
+        Cloudkeeper::One::Errors::Actions::UpdateError => CloudkeeperGrpc::Constants::STATUS_ERROR_APPLIANCE_NOT_FOUND,
+        Cloudkeeper::One::Errors::NetworkConnectionError => CloudkeeperGrpc::Constants::STATUS_ERROR_APPLIANCE_TRANSFER,
+        Cloudkeeper::One::Errors::Opennebula::AuthenticationError => CloudkeeperGrpc::Constants::STATUS_ERROR_AUTHENTICATION,
+        Cloudkeeper::One::Errors::Opennebula::UserNotAuthorizedError => CloudkeeperGrpc::Constants::STATUS_ERROR_USER_NOT_AUTHORIZED,
+        Cloudkeeper::One::Errors::Opennebula::ResourceNotFoundError => CloudkeeperGrpc::Constants::STATUS_ERROR_RESOURCE_NOT_FOUND,
+        Cloudkeeper::One::Errors::Actions::RegistrationError => CloudkeeperGrpc::Constants::STATUS_ERROR_RESOURCE_NOT_FOUND,
+        Cloudkeeper::One::Errors::Opennebula::ResourceRetrievalError => CloudkeeperGrpc::Constants::STATUS_ERROR_RESOURCE_RETRIEVAL,
+        Cloudkeeper::One::Errors::Opennebula::ResourceStateError => CloudkeeperGrpc::Constants::STATUS_ERROR_RESOURCE_STATE,
+        Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError => CloudkeeperGrpc::Constants::STATUS_ERROR_RESOURCE_STATE
+      ).freeze
 
       def initialize
         super
@@ -28,56 +30,76 @@ module Cloudkeeper
         @group_handler = Cloudkeeper::One::Opennebula::GroupHandler.new
       end
 
-      def pre_action(_empty, _unused_call)
+      def pre_action(_empty, call)
         logger.debug 'Running \'pre-action\'...'
-        handle_errors { remove_expired }
+        call_backend(call) { remove_expired }
       end
 
-      def post_action(_empty, _unused_call)
+      def post_action(_empty, call)
         logger.debug 'Running \'post-action\'...'
-        CloudkeeperGrpc::Status.new(code: :SUCCESS, message: '')
+        call.output_metadata['status'] = 'SUCCESS'
+        Google::Protobuf::Empty.new
       end
 
-      def add_appliance(appliance, _unused_call)
+      def add_appliance(appliance, call)
         logger.debug "Registering appliance #{appliance.identifier.inspect}"
-        handle_errors { register_or_update_appliance appliance }
+        call_backend(call) { register_or_update_appliance appliance }
       end
 
-      def update_appliance(appliance, _unused_call)
+      def update_appliance(appliance, call)
         logger.debug "Updating appliance #{appliance.identifier.inspect}"
-        handle_errors { appliance.image ? register_or_update_appliance(appliance) : update_appliance_metadata(appliance) }
+        call_backend(call) { appliance.image ? register_or_update_appliance(appliance) : update_appliance_metadata(appliance) }
       end
 
-      def remove_appliance(appliance, _unused_call)
+      def remove_appliance(appliance, call)
         logger.debug "Removing appliance #{appliance.identifier.inspect}"
-        handle_errors { remove_appliance appliance }
+        call_backend(call) { remove_appliance appliance }
       end
 
-      def remove_image_list(image_list_identifier, _unused_call)
+      def remove_image_list(image_list_identifier, call)
         logger.debug "Removing appliances from image list #{image_list_identifier.image_list_identifier.inspect}"
-        handle_errors { remove_image_list image_list_identifier.image_list_identifier }
+        call_backend(call) { remove_image_list image_list_identifier.image_list_identifier }
       end
 
-      def image_lists(_empty, _unused_call)
+      def image_lists(_empty, call)
         logger.debug 'Retrieving image lists registered in OpenNebula'
-        list_image_lists.each
+        call_backend(call, default_return_value: [], use_return_value: true) { list_image_lists.each }
       end
 
-      def appliances(image_list_identifier, _unused_call)
+      def appliances(image_list_identifier, call)
         logger.debug "Retrieving appliances from image list #{image_list_identifier.image_list_identifier.inspect} " \
                      'registered in OpenNebula'
-        list_appliances(image_list_identifier.image_list_identifier).each
+        call_backend(call, default_return_value: [], use_return_value: true) do
+          list_appliances(image_list_identifier.image_list_identifier).each
+        end
       end
 
       private
 
-      def handle_errors
+      def call_backend(call, default_return_value: Google::Protobuf::Empty.new, use_return_value: false)
         raise Cloudkeeper::One::Errors::ArgumentError, 'Error handler was called without a block!' unless block_given?
 
-        yield
-        CloudkeeperGrpc::Status.new(code: :SUCCESS, message: '')
+        return_value = handle_errors(call) { yield }
+        finalize_return_value(return_value, default_return_value, use_return_value)
+      end
+
+      def handle_errors(call)
+        return_value = yield
+        call.output_metadata[CloudkeeperGrpc::Constants::KEY_STATUS] = CloudkeeperGrpc::Constants::STATUS_SUCCESS
+
+        return_value
       rescue Cloudkeeper::One::Errors::StandardError => ex
-        CloudkeeperGrpc::Status.new(code: ERRORS[ex.class], message: ex.message)
+        logger.error "#{ex.class.inspect}: #{ex.message}"
+        call.output_metadata[CloudkeeperGrpc::Constants::KEY_STATUS] = ERRORS[ex.class]
+        call.output_metadata[CloudkeeperGrpc::Constants::KEY_MESSAGE] = ex.message
+
+        return_value
+      end
+
+      def finalize_return_value(return_value, default_return_value, use_return_value)
+        return_value = use_return_value ? return_value : default_return_value
+
+        return_value
       end
     end
   end

@@ -4,14 +4,17 @@ module Cloudkeeper
       module List
         def list_image_lists
           logger.debug 'Listing all image lists available in OpenNebula'
-          template_handler.find_all.map do |template|
+          image_list_identifiers = template_handler.find_all.map do |template|
             image_list_identifier = template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_IMAGE_LIST_ID}"]
             unless image_list_identifier
               logger.warn "Managed template #{template.id.inspect} is missing image list identifier"
               next
             end
-            CloudkeeperGrpc::ImageListIdentifier.new image_list_identifier: image_list_identifier
-          end.compact.uniq(&:image_list_identifier).sort_by(&:image_list_identifier)
+            image_list_identifier
+          end.compact.uniq.sort
+
+          logger.debug "Image lists available in OpenNebula: #{image_list_identifiers.inspect}"
+          image_list_identifiers.map { |ili| CloudkeeperGrpc::ImageListIdentifier.new image_list_identifier: ili }
         end
 
         def list_appliances(image_list_id)
