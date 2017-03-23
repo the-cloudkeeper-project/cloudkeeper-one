@@ -5,6 +5,7 @@ module Cloudkeeper
       autoload :ArgumentError, 'cloudkeeper/one/errors/argument_error'
       autoload :NetworkConnectionError, 'cloudkeeper/one/errors/network_connection_error'
       autoload :MultiError, 'cloudkeeper/one/errors/multi_error'
+      autoload :InvalidConfigurationError, 'cloudkeeper/one/errors/invalid_configuration_error'
 
       autoload :Opennebula, 'cloudkeeper/one/errors/opennebula'
       autoload :Actions, 'cloudkeeper/one/errors/actions'
