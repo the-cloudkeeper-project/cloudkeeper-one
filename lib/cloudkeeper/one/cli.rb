@@ -96,7 +96,8 @@ module Cloudkeeper
         grpc_server.add_http2_port Cloudkeeper::One::Settings[:'listen-address'], credentials
         grpc_server.handle Cloudkeeper::One::CoreConnector
         grpc_server.run_till_terminated
-        # TODO: interrupt catching
+      rescue Interrupt
+        grpc_server.stop
       rescue Cloudkeeper::One::Errors::InvalidConfigurationError => ex
         abort ex.message
       end
