@@ -24,6 +24,8 @@ Metrics/AbcSize:
 
 Metrics/ClassLength:
   Max: 120
+  Exclude:
+    - 'lib/cloudkeeper/one/cli.rb'
 
 RSpec/MultipleExpectations:
   Enabled: false

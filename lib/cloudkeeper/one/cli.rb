@@ -24,11 +24,30 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['listen-address'],
                     type: :string,
                     desc: 'IP address gRPC server will listen on'
+      method_option :authentication,
+                    default: Cloudkeeper::One::Settings['authentication'],
+                    type: :boolean,
+                    desc: 'Client <-> server authentication'
+      method_option :certificate,
+                    required: false,
+                    default: Cloudkeeper::One::Settings['certificate'],
+                    type: :string,
+                    desc: "Backend's host certificate"
+      method_option :key,
+                    required: false,
+                    default: Cloudkeeper::One::Settings['key'],
+                    type: :string,
+                    desc: "Backend's host key"
       method_option :identifier,
                     required: true,
                     default: Cloudkeeper::One::Settings['identifier'],
                     type: :string,
                     desc: 'Instance identifier'
+      method_option :'core-certificate',
+                    required: false,
+                    default: Cloudkeeper::One::Settings['core']['certificate'],
+                    type: :string,
+                    desc: "Core's certificate"
       method_option :'appliances-tmp-dir',
                     required: true,
                     default: Cloudkeeper::One::Settings['appliances']['tmp-dir'],
@@ -74,10 +93,12 @@ module Cloudkeeper
       def sync
         initialize_sync options
         grpc_server = GRPC::RpcServer.new
-        grpc_server.add_http2_port Cloudkeeper::One::Settings[:'listen-address'], :this_port_is_insecure
+        grpc_server.add_http2_port Cloudkeeper::One::Settings[:'listen-address'], credentials
         grpc_server.handle Cloudkeeper::One::CoreConnector
         grpc_server.run_till_terminated
         # TODO: interrupt catching
+      rescue Cloudkeeper::One::Errors::InvalidConfigurationError => ex
+        abort ex.message
       end
 
       desc 'version', 'Prints cloudkeeper version'
@@ -91,8 +112,38 @@ module Cloudkeeper
 
       def initialize_sync(options)
         initialize_configuration options
+        validate_configuration!
         initialize_logger
         logger.debug "cloudkeeper-one 'sync' called with parameters: #{Cloudkeeper::One::Settings.to_hash.inspect}"
+      end
+
+      def validate_configuration!
+        validate_configuration_group! :authentication,
+                                      [:certificate, :key, :'core-certificate'],
+                                      'Authentication configuration missing'
+      end
+
+      def validate_configuration_group!(flag, required_options, error_message)
+        return unless Cloudkeeper::One::Settings[flag]
+
+        raise Cloudkeeper::One::Errors::InvalidConfigurationError, error_message unless all_options_available(required_options)
+      end
+
+      def all_options_available(required_options)
+        required_options.reduce(true) { |acc, elem| Cloudkeeper::One::Settings[elem] && acc }
+      end
+
+      def credentials
+        return :this_port_is_insecure unless Cloudkeeper::One::Settings[:authentication]
+
+        GRPC::Core::ServerCredentials.new(
+          File.read(Cloudkeeper::One::Settings[:'core-certificate']),
+          [
+            private_key: File.read(Cloudkeeper::One::Settings[:key]),
+            cert_chain: File.read(Cloudkeeper::One::Settings[:certificate])
+          ],
+          true
+        )
       end
 
       def initialize_configuration(options)

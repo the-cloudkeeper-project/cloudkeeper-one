@@ -1,6 +1,11 @@
 cloudkeeper-one:
   listen-address: 127.0.0.1:50051 # IP address gRPC server will listen on
+  authentication: false # core (client) <-> backend (server) authentication (certificate, key and core-certificate options)
+  certificate: /etc/grid-security/hostcert.pem # Backend's host certificate
+  key: /etc/grid-security/hostkey.pem # Backend's host key
   identifier: cloudkeeper-one # Instance identifier
+  core:
+    certificate: /etc/grid-security/corecert.pem # Core's certificate
   appliances:
     tmp-dir: /var/spool/cloudkeeper-one/appliances # Directory where to temporarily store appliances
     template-dir: # If set, templates within this directory are used to construct images and templates in OpenNebula
