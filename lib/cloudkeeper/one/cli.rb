@@ -158,11 +158,6 @@ module Cloudkeeper
           ChronicDuration.parse Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'], keep_zero: true
       end
 
-      # Inits logging according to the settings
-      #
-      # @option parameters [String] logging-level
-      # @option parameters [String] logging-file file to log to
-      # @option parameters [TrueClass, FalseClass] debug debug mode
       def initialize_logger
         Cloudkeeper::One::Settings[:'logging-level'] = 'DEBUG' if Cloudkeeper::One::Settings[:debug]
 
