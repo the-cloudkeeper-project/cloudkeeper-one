@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Cloudkeeper::One::Opennebula::Helper do
   subject(:helper) { Object.new.extend described_class }
+
   let(:endpoint) { 'http://localhost:2633/RPC2' }
   let(:secret) { 'user:opennebula' }
   let(:client) { OpenNebula::Client.new secret, endpoint }

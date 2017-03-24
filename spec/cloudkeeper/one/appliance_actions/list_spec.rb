@@ -99,6 +99,7 @@ describe Cloudkeeper::One::ApplianceActions::List do
 
   describe '.populate_proto_image', :vcr do
     let(:image) { Cloudkeeper::One::Opennebula::ImageHandler.new.find_by_id 24 }
+
     it 'populates proto image structure' do
       proto_image = list.send(:populate_proto_image, image)
       expect(proto_image.mode).to eq(:LOCAL)

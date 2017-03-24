@@ -33,6 +33,7 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
   describe '.register_or_update_appliance' do
     context 'wtih nonexisting vo', :vcr do
       let(:appliance) { Struct.new(:vo).new('nonexistingvo') }
+
       it 'raises RegistrationError' do
         expect { registration.register_or_update_appliance appliance }.to \
           raise_error(Cloudkeeper::One::Errors::Actions::RegistrationError)
