@@ -120,7 +120,7 @@ module Cloudkeeper
 
       def validate_configuration!
         validate_configuration_group! :authentication,
-                                      [:certificate, :key, :'core-certificate'],
+                                      %i(certificate key core-certificate),
                                       'Authentication configuration missing'
       end
 
