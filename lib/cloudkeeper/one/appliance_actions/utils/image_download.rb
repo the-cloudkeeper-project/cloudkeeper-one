@@ -28,8 +28,8 @@ module Cloudkeeper
                 open(filename, 'w') { |file| response.read_body { |chunk| file.write(chunk) } }
               end
             end
-          rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, Errno::ECONNREFUSED, EOFError, Net::HTTPBadResponse,
-                 Net::HTTPServerException, Net::HTTPHeaderSyntaxError, Net::ProtocolError => ex
+          rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, Errno::ECONNREFUSED, Net::HTTPBadResponse,
+                 Net::HTTPHeaderSyntaxError, EOFError, Net::HTTPServerException => ex
             raise Cloudkeeper::One::Errors::NetworkConnectionError, ex
           end
 
