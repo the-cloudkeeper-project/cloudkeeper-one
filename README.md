@@ -9,20 +9,20 @@ OpenNebula backend for [cloudkeeper](https://github.com/the-cloudkeeper-project/
 ## What does cloudkeeper-one do?
 cloudkeeper-one is able to manage [OpenNebula](https://opennebula.org/) cloud - upload, update and remove images and templates representing EGI AppDB appliances. cloudkeeper-one runs as a server listening for [gRPC](http://www.grpc.io/) communication usually from core [cloudkeeper](https://github.com/the-cloudkeeper-project/cloudkeeper) component.
 
-##Requirements
-* Ruby >= 2.0.0
+## Requirements
+* Ruby >= 2.2.0
 * Rubygems
 * OpenNebula >= 5.2 (doesn't have to be present on the same machine)
 
 ## Installation
 
-###From RubyGems.org
+### From RubyGems.org
 To install the most recent stable version
 ```bash
 gem install cloudkeeper-one
 ```
 
-###From source (dev)
+### From source (dev)
 **Installation from source should never be your first choice! Especially, if you are not
 familiar with RVM, Bundler, Rake and other dev tools for Ruby!**
 
@@ -38,8 +38,8 @@ bundle install
 bundle exec rake spec
 ```
 
-##Configuration
-###Create a configuration file for cloudkeeper-one
+## Configuration
+### Create a configuration file for cloudkeeper-one
 Configuration file can be read by cloudkeeper-one from these
 three locations:
 
