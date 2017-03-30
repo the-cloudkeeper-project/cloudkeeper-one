@@ -5,6 +5,10 @@ require 'chronic_duration'
 module Cloudkeeper
   module One
     class CLI < Thor
+      SIGINT = 2
+      SIGTERM = 15
+      SIGNALS = [SIGTERM, SIGINT].freeze
+
       class_option :'logging-level',
                    required: true,
                    default: Cloudkeeper::One::Settings['logging']['level'],
@@ -96,7 +100,8 @@ module Cloudkeeper
         grpc_server.add_http2_port Cloudkeeper::One::Settings[:'listen-address'], credentials
         grpc_server.handle Cloudkeeper::One::CoreConnector
         grpc_server.run_till_terminated
-      rescue Interrupt
+      rescue SignalException => ex
+        raise ex unless SIGNALS.include? ex.signo
         grpc_server.stop
       rescue Cloudkeeper::One::Errors::InvalidConfigurationError => ex
         abort ex.message
