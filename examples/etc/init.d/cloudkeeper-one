@@ -61,7 +61,7 @@ stop() {
     if is_running; then
         echo "Stopping $name ..."
 
-        kill -SIGINT `get_pid`
+        kill -s TERM `get_pid`
         for i in $(seq 1 15); do
             if ! is_running; then
                 break
@@ -73,7 +73,7 @@ stop() {
         echo
         if is_running; then
             echo "Not stopped; may still be shutting down or shutdown may have failed"
-            kill -SIGKILL `get_pid`
+            kill -s KILL `get_pid`
             retval=1
         else
             echo "Stopped"
