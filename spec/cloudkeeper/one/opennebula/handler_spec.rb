@@ -182,7 +182,7 @@ describe Cloudkeeper::One::Opennebula::Handler do
 
     context 'with array-like truthy xpath' do
       it 'returns true' do
-        expect(handler.send(:evaluate_xpaths, element, 'NAME' => %w(alement blement clement element flement))).to be_truthy
+        expect(handler.send(:evaluate_xpaths, element, 'NAME' => %w[alement blement clement element flement])).to be_truthy
       end
     end
 
