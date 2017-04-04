@@ -92,6 +92,10 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['opennebula']['api-call-timeout'],
                     type: :string,
                     desc: 'How long will cloudkeeper-one wait for image/template operations to finish in OpenNebula'
+      method_option :'opennebula-allow-remote-source',
+                    default: Cloudkeeper::One::Settings['opennebula']['allow-remote-source'],
+                    type: :boolean,
+                    desc: 'Allows OpenNebula to directly download remote image'
 
       desc 'sync', 'Runs synchronization process'
       def sync
@@ -125,7 +129,7 @@ module Cloudkeeper
 
       def validate_configuration!
         validate_configuration_group! :authentication,
-                                      %i(certificate key core-certificate),
+                                      %i[certificate key core-certificate],
                                       'Authentication configuration missing'
       end
 

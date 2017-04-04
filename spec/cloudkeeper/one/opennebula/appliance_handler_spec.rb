@@ -27,7 +27,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     context 'with existing appliance id' do
       context 'with users option set' do
         before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = %w(user kile)
+          Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
         end
 
         it 'returns all elements with specified appliance id, with specified identifier and owned by one of the users' do
@@ -67,7 +67,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     context 'with existing image list id' do
       context 'with users option set' do
         before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = %w(user kile)
+          Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
         end
 
         it 'returns all elements with specified image list id, with specified identifier and owned by one of the users' do

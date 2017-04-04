@@ -24,7 +24,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
   describe '.expired', :vcr do
     context 'with users option set' do
       before do
-        Cloudkeeper::One::Settings[:'opennebula-users'] = %w(user kile)
+        Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
       end
 
       it 'returns list of all exprired images, with specified identifier and owned by one of the specified users' do
