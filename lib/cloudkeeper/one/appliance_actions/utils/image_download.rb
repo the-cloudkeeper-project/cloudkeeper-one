@@ -20,7 +20,8 @@ module Cloudkeeper
 
           def retrieve_image(uri, username, password, filename)
             logger.debug "Downloading image from #{uri.inspect} (username: #{username}, password: #{password})"
-            Net::HTTP.start(uri.host, uri.port) do |http|
+            use_ssl = uri.scheme == 'https'
+            Net::HTTP.start(uri.host, uri.port, use_ssl: use_ssl) do |http|
               request = Net::HTTP::Get.new(uri)
               request.basic_auth username, password
 
@@ -31,7 +32,7 @@ module Cloudkeeper
             end
             logger.debug "Image stored into #{filename}"
           rescue Timeout::Error, Errno::EINVAL, Errno::ECONNRESET, Errno::ECONNREFUSED, Net::HTTPBadResponse,
-                 Net::HTTPHeaderSyntaxError, EOFError, Net::HTTPServerException => ex
+                 Net::HTTPHeaderSyntaxError, EOFError, Net::HTTPServerException, Net::HTTPRetriableError => ex
             raise Cloudkeeper::One::Errors::NetworkConnectionError, ex
           end
 
