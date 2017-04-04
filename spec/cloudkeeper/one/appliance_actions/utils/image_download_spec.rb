@@ -7,6 +7,7 @@ describe Cloudkeeper::One::ApplianceActions::Utils::ImageDownload do
 
   before do
     Cloudkeeper::One::Settings[:'appliances-tmp-dir'] = Dir.mktmpdir('cloudkeeper-one-spec')
+    Cloudkeeper::One::Settings[:'opennebula-allow-remote-source'] = false
   end
 
   after do
@@ -62,6 +63,16 @@ describe Cloudkeeper::One::ApplianceActions::Utils::ImageDownload do
     end
   end
 
+  describe '.generate_url' do
+    let(:username) { 'username' }
+    let(:password) { 'password' }
+    let(:uri) { 'http://localhost:9292/image.ext' }
+
+    it 'returns URL with correct authentication information' do
+      expect(image_download.send(:generate_url, uri, username, password)).to eq('http://username:password@localhost:9292/image.ext')
+    end
+  end
+
   describe '.download_image' do
     let(:username) { 'cloudkeeper-spec' }
     let(:password) { 'cloudkeeper-spec' }
@@ -79,6 +90,20 @@ describe Cloudkeeper::One::ApplianceActions::Utils::ImageDownload do
         filename = image_download.download_image url, username, password
         expect(Digest::MD5.file(filename).hexdigest).to eq('fac38ff3ef782be59900c1919d901063')
         expect(filename.start_with?(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])).to be_truthy
+      end
+    end
+
+    context 'with allowed remote sources' do
+      before do
+        Cloudkeeper::One::Settings[:'opennebula-allow-remote-source'] = true
+      end
+
+      let(:username) { 'username' }
+      let(:password) { 'password' }
+      let(:uri) { 'http://localhost:9292/image.ext' }
+
+      it 'returns remote URL' do
+        expect(image_download.download_image(url, username, password)).to eq('http://username:password@localhost:9292/image.ext')
       end
     end
   end

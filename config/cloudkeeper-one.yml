@@ -17,6 +17,7 @@ cloudkeeper-one:
       - default
     users: # Handle only images/templates of specified users
     api-call-timeout: 3h # How long will cloudkeeper-one wait for image/template operations to finish in OpenNebula
+    allow-remote-source: true # Allows OpenNebula to directly download remote image
   logging:
     level: ERROR # Logging level
     file: /var/log/cloudkeeper/cloudkeeper-one.log # File to write log to. To turn off file logging leave this field empty.
