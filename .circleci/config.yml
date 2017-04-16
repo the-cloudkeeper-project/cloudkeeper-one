@@ -1,0 +1,36 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    docker:
+      - image: docker:stable
+    working_directory: /root/cloudkeeper-one
+    steps:
+      - run: apk add --no-cache git openssh
+      - checkout
+      - setup_remote_docker
+      - run: |
+          TAG=${CIRCLE_BRANCH}
+          BRANCH=${CIRCLE_BRANCH}
+          VERSION=">= 0"
+
+          if [ "${TAG}" == "master" ]; then
+            TAG=latest
+          fi
+
+          if [ -n "${CIRCLE_TAG}" ]; then
+            TAG=${CIRCLE_TAG#v}
+            BRANCH=${TAG/%.*/.x}
+            VERSION=${TAG}
+          fi
+
+          docker build --build-arg branch=$BRANCH --build-arg version="$VERSION" -t cloudkeeper/cloudkeeper-one:$TAG .
+          docker login -u $DOCKER_USER -p $DOCKER_PASS
+          docker push cloudkeeper/cloudkeeper-one:$TAG
+deployment:
+  fake_deploy_for_cci2:
+    tag: /v.*/
+    commands:
+      - echo "make tags run in 2.0"
