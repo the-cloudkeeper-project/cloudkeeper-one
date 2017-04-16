@@ -14,6 +14,7 @@ jobs:
       - run: |
           TAG=${CIRCLE_BRANCH}
           BRANCH=${CIRCLE_BRANCH}
+          VERSION=">= 0"
 
           if [ "${TAG}" == "master" ]; then
             TAG=latest
@@ -22,9 +23,10 @@ jobs:
           if [ -n "${CIRCLE_TAG}" ]; then
             TAG=${CIRCLE_TAG#v}
             BRANCH=${TAG/%.*/.x}
+            VERSION=${TAG}
           fi
 
-          docker build --build-arg branch=$BRANCH --build-arg version=$TAG -t cloudkeeper/cloudkeeper-one:$TAG .
+          docker build --build-arg branch=$BRANCH --build-arg version="$VERSION" -t cloudkeeper/cloudkeeper-one:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push cloudkeeper/cloudkeeper-one:$TAG
 deployment:

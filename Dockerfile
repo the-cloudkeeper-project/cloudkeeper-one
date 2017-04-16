@@ -23,7 +23,7 @@ RUN apt-get update && \
     apt-get --assume-yes install ruby ruby-dev zlib1g-dev gcc patch make
 
 # cloudkeeper-one
-RUN gem install ${name} -v ${version} --no-document
+RUN gem install ${name} -v "${version}" --no-document
 
 # env
 RUN useradd --system --shell /bin/false --home ${spoolDir} --create-home ${username} && \
