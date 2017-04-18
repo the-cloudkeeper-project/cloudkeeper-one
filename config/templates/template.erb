@@ -6,9 +6,9 @@ DESCRIPTION = "<%= "#{appliance.title} - #{appliance.description}" %>"
 DESCRIPTION = "<%= appliance.title %>"
 <% end %>
 
-MEMORY = "<%= appliance.ram || 1024 %>"
-CPU = "<%= appliance.core || 0.25 %>"
-VCPU = "<%= appliance.core || 1 %>"
+MEMORY = "<%= appliance.ram != 0 ? appliance.ram : 1024 %>"
+CPU = "<%= appliance.core != 0 ? appliance.core : 0.25 %>"
+VCPU = "<%= appliance.core != 0 ? appliance.core : 1 %>"
 
 OS = [
 ARCH = "<%= appliance.architecture || "x86_64" %>"
