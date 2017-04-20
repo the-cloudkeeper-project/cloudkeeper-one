@@ -1,10 +1,11 @@
 # cloudkeeper-one
 OpenNebula backend for [cloudkeeper](https://github.com/the-cloudkeeper-project/cloudkeeper)
 
-[![Build Status](https://secure.travis-ci.org/the-cloudkeeper-project/cloudkeeper-one.png)](http://travis-ci.org/the-cloudkeeper-project/cloudkeeper-one)
-[![Dependency Status](https://gemnasium.com/the-cloudkeeper-project/cloudkeeper-one.png)](https://gemnasium.com/the-cloudkeeper-project/cloudkeeper-one)
-[![Gem Version](https://fury-badge.herokuapp.com/rb/cloudkeeper-one.png)](https://badge.fury.io/rb/cloudkeeper-one)
-[![Code Climate](https://codeclimate.com/github/the-cloudkeeper-project/cloudkeeper-one.png)](https://codeclimate.com/github/the-cloudkeeper-project/cloudkeeper-one)
+[![Travis](https://img.shields.io/travis/the-cloudkeeper-project/cloudkeeper-one.svg?style=flat-square)](http://travis-ci.org/the-cloudkeeper-project/cloudkeeper-one)
+[![Gemnasium](https://img.shields.io/gemnasium/the-cloudkeeper-project/cloudkeeper-one.svg?style=flat-square)](https://gemnasium.com/the-cloudkeeper-project/cloudkeeper-one)
+[![Gem](https://img.shields.io/gem/v/cloudkeeper-one.svg?style=flat-square)](https://rubygems.org/gems/cloudkeeper-one)
+[![Code Climate](https://img.shields.io/codeclimate/github/the-cloudkeeper-project/cloudkeeper-one.svg?style=flat-square)](https://codeclimate.com/github/the-cloudkeeper-project/cloudkeeper-one)
+[![DockerHub](https://img.shields.io/badge/docker-ready-blue.svg?style=flat-square)](https://hub.docker.com/r/cloudkeeper/cloudkeeper-one/)
 
 ## What does cloudkeeper-one do?
 cloudkeeper-one is able to manage [OpenNebula](https://opennebula.org/) cloud - upload, update and remove images and templates representing EGI AppDB appliances. cloudkeeper-one runs as a server listening for [gRPC](http://www.grpc.io/) communication usually from core [cloudkeeper](https://github.com/the-cloudkeeper-project/cloudkeeper) component.

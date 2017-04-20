@@ -48,7 +48,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'yell', '~> 2.0'
   spec.add_runtime_dependency 'grpc', '~> 1.0'
   spec.add_runtime_dependency 'settingslogic', '~> 2.0'
-  spec.add_runtime_dependency 'activesupport', '~> 4.0'
+  spec.add_runtime_dependency 'activesupport', '>= 4.0', '< 6.0'
   spec.add_runtime_dependency 'tilt', '~> 2.0'
   spec.add_runtime_dependency 'opennebula', '~> 5.2'
   spec.add_runtime_dependency 'chronic_duration', '~> 0.10'
