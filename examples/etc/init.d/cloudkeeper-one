@@ -11,6 +11,7 @@
 ### END INIT INFO
 
 run_dir="/var/run/cloudkeeper-one"
+lock_dir="/var/lock/cloudkeeper-one"
 log_dir="/var/log/cloudkeeper-one"
 conf_dir="/etc/cloudkeeper-one"
 
@@ -34,6 +35,11 @@ get_pid() {
     cat "$pid_file"
 }
 
+setup_dirs() {
+    mkdir -p "$run_dir" "$lock_dir"
+    chown "$user":"$user" "$run_dir" "$lock_dir"
+}
+
 is_running() {
     [ -f "$pid_file" ] && ps `get_pid` > /dev/null 2>&1
 }
@@ -43,6 +49,7 @@ start() {
         echo "Already started"
     else
         echo "Starting $name ..."
+        setup_dirs
 
         cd "$run_dir"
         sudo -u "$user" $cmd >> "$stdout_log" 2>> "$stderr_log" &
