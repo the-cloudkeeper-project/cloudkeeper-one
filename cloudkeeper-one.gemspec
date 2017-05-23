@@ -42,11 +42,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry-byebug', '~> 3.4'
   spec.add_development_dependency 'vcr', '~> 3.0'
   spec.add_development_dependency 'webmock', '~> 3.0'
-  spec.add_development_dependency 'grpc-tools', '~> 1.0'
+  spec.add_development_dependency 'grpc-tools', '>= 1.1', '<= 1.2.5'
 
   spec.add_runtime_dependency 'thor', '~> 0.19'
   spec.add_runtime_dependency 'yell', '~> 2.0'
-  spec.add_runtime_dependency 'grpc', '~> 1.0'
+  spec.add_runtime_dependency 'grpc', '>= 1.1', '<= 1.2.5'
   spec.add_runtime_dependency 'settingslogic', '~> 2.0'
   spec.add_runtime_dependency 'activesupport', '>= 4.0', '< 6.0'
   spec.add_runtime_dependency 'tilt', '~> 2.0'
