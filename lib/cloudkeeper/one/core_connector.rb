@@ -4,7 +4,7 @@ module Cloudkeeper
       attr_reader :image_handler, :template_handler, :datastore_handler, :group_handler
 
       include Cloudkeeper::One::ApplianceActions::Registration
-      include Cloudkeeper::One::ApplianceActions::Removal
+      include Cloudkeeper::One::ApplianceActions::Discard
       include Cloudkeeper::One::ApplianceActions::Update
       include Cloudkeeper::One::ApplianceActions::List
 
@@ -32,7 +32,7 @@ module Cloudkeeper
 
       def pre_action(_empty, call)
         logger.debug 'Running \'pre-action\'...'
-        call_backend(call) { remove_expired }
+        call_backend(call) { discard_expired }
       end
 
       def post_action(_empty, call)
@@ -53,12 +53,12 @@ module Cloudkeeper
 
       def remove_appliance(appliance, call)
         logger.debug "Removing appliance #{appliance.identifier.inspect}"
-        call_backend(call) { remove_appliance appliance }
+        call_backend(call) { discard_appliance appliance.identifier }
       end
 
       def remove_image_list(image_list_identifier, call)
         logger.debug "Removing appliances from image list #{image_list_identifier.image_list_identifier.inspect}"
-        call_backend(call) { remove_image_list image_list_identifier.image_list_identifier }
+        call_backend(call) { discard_image_list image_list_identifier.image_list_identifier }
       end
 
       def image_lists(_empty, call)
