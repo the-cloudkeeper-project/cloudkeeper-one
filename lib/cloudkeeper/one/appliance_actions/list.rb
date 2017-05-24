@@ -22,10 +22,13 @@ module Cloudkeeper
           templates = template_handler.find_by_image_list_id image_list_id
           templates.uniq! { |template| template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ID}"] }
 
-          templates.map do |template|
+          appliances = templates.map do |template|
             image = find_image_for_template template
             populate_proto_appliance template, image
           end
+
+          logger.debug "Appliances: #{appliances.map(&:identifier).inspect}"
+          appliances
         end
 
         private
