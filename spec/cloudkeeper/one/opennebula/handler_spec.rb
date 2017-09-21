@@ -200,22 +200,22 @@ describe Cloudkeeper::One::Opennebula::Handler do
       end
     end
 
-    context 'on pool with info_all! method' do
+    context 'on pool with info_mine! method' do
       before do
         handler.pool = OpenNebula::ImagePool.new handler.client
-        allow(handler.pool).to receive(:info_all!)
+        allow(handler.pool).to receive(:info_mine!)
       end
 
       after do
-        expect(handler.pool).to have_received(:info_all!)
+        expect(handler.pool).to have_received(:info_mine!)
       end
 
-      it 'calls info_all! method on pool' do
+      it 'calls info_mine! method on pool' do
         handler.send(:reload!)
       end
     end
 
-    context 'on pool without info_all! method' do
+    context 'on pool without info_mine! method' do
       before do
         handler.pool = OpenNebula::DatastorePool.new handler.client
         allow(handler.pool).to receive(:info!)
