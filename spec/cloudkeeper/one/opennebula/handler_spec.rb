@@ -100,13 +100,13 @@ describe Cloudkeeper::One::Opennebula::Handler do
 
     context 'if element with specified id exists' do
       it 'returns true' do
-        expect(handler.exist?(3)).to be_truthy
+        expect(handler).to be_exist(3)
       end
     end
 
     context 'if there is no element with specified id' do
       it 'returns false' do
-        expect(handler.exist?(42)).to be_falsy
+        expect(handler).not_to be_exist(42)
       end
     end
   end
@@ -206,12 +206,9 @@ describe Cloudkeeper::One::Opennebula::Handler do
         allow(handler.pool).to receive(:info_mine!)
       end
 
-      after do
-        expect(handler.pool).to have_received(:info_mine!)
-      end
-
       it 'calls info_mine! method on pool' do
         handler.send(:reload!)
+        expect(handler.pool).to have_received(:info_mine!)
       end
     end
 
@@ -221,12 +218,9 @@ describe Cloudkeeper::One::Opennebula::Handler do
         allow(handler.pool).to receive(:info!)
       end
 
-      after do
-        expect(handler.pool).to have_received(:info!)
-      end
-
       it 'calls info! method on pool' do
         handler.send(:reload!)
+        expect(handler.pool).to have_received(:info!)
       end
     end
   end

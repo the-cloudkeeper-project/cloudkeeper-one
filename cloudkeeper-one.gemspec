@@ -1,5 +1,3 @@
-# coding: utf-8
-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cloudkeeper/one/version'
@@ -17,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   # get an array of submodule dirs by executing 'pwd' inside each submodule
-  gem_dir = File.expand_path(File.dirname(__FILE__)) + '/'
+  gem_dir = __dir__ + '/'
   `git submodule --quiet foreach --recursive pwd`.split($OUTPUT_RECORD_SEPARATOR).each do |submodule_path|
     Dir.chdir(submodule_path) do
       submodule_relative_path = submodule_path.sub gem_dir, ''

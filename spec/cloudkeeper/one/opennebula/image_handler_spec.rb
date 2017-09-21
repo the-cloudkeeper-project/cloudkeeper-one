@@ -88,7 +88,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       it 'won\'t disabe already disabled image' do
         image = handler.find_by_id 5
         handler.disable image
-        expect(handler.disabled?(image)).to be_truthy
+        expect(handler).to be_disabled(image)
       end
     end
 
@@ -96,7 +96,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       it 'won\'t disable image which is not free' do
         image = handler.find_by_id 5
         handler.disable image
-        expect(handler.disabled?(image)).to be_falsy
+        expect(handler).not_to be_disabled(image)
       end
     end
 
@@ -104,7 +104,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       it 'disables image' do
         image = handler.find_by_id 5
         handler.disable image
-        expect(handler.disabled?(image)).to be_truthy
+        expect(handler).to be_disabled(image)
       end
     end
 
@@ -127,7 +127,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       it 'won\'t expire already expired image' do
         image = handler.find_by_id 6
         handler.expire image
-        expect(handler.expired?(image)).to be_truthy
+        expect(handler).to be_expired(image)
       end
     end
 
@@ -135,7 +135,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       it 'expires image' do
         image = handler.find_by_id 3
         handler.expire image
-        expect(handler.expired?(image)).to be_truthy
+        expect(handler).to be_expired(image)
         expect(image['PERMISSIONS/OWNER_U']).to eq('1')
         expect(image['PERMISSIONS/OWNER_M']).to eq('1')
         expect(image['PERMISSIONS/OWNER_A']).to eq('0')
@@ -190,14 +190,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     context 'with expired image' do
       it 'returns true' do
         image = handler.find_by_id 7
-        expect(handler.expired?(image)).to be_truthy
+        expect(handler).to be_expired(image)
       end
     end
 
     context 'with not expired image' do
       it 'returns false' do
         image = handler.find_by_id 5
-        expect(handler.expired?(image)).to be_falsy
+        expect(handler).not_to be_expired(image)
       end
     end
   end
@@ -206,14 +206,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     context 'with disabled image' do
       it 'returns true' do
         image = handler.find_by_id 7
-        expect(handler.disabled?(image)).to be_truthy
+        expect(handler).to be_disabled(image)
       end
     end
 
     context 'with enabled image' do
       it 'returns false' do
         image = handler.find_by_id 5
-        expect(handler.disabled?(image)).to be_falsy
+        expect(handler).not_to be_disabled(image)
       end
     end
   end
@@ -222,14 +222,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     context 'with ready image' do
       it 'returns true' do
         image = handler.find_by_id 5
-        expect(handler.ready?(image)).to be_truthy
+        expect(handler).to be_ready(image)
       end
     end
 
     context 'with not ready image' do
       it 'returns false' do
         image = handler.find_by_id 7
-        expect(handler.ready?(image)).to be_falsy
+        expect(handler).not_to be_ready(image)
       end
     end
   end
@@ -238,14 +238,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     context 'with used image' do
       it 'returns true' do
         image = handler.find_by_id 3
-        expect(handler.used?(image)).to be_truthy
+        expect(handler).to be_used(image)
       end
     end
 
     context 'with unused image' do
       it 'returns false' do
         image = handler.find_by_id 6
-        expect(handler.used?(image)).to be_falsy
+        expect(handler).not_to be_used(image)
       end
     end
   end
@@ -254,14 +254,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     context 'with free image' do
       it 'returns true' do
         image = handler.find_by_id 5
-        expect(handler.free?(image)).to be_truthy
+        expect(handler).to be_free(image)
       end
     end
 
     context 'with not free image' do
       it 'returns false' do
         image = handler.find_by_id 7
-        expect(handler.free?(image)).to be_falsy
+        expect(handler).not_to be_free(image)
       end
     end
   end

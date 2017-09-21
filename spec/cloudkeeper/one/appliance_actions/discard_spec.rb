@@ -50,9 +50,9 @@ describe Cloudkeeper::One::ApplianceActions::Discard do
         it 'expires images with specified identifier in OpenNebula' do
           discard.discard_images :find_by_appliance_id, 'qwerty123'
           image = image_handler.find_by_id 18
-          expect(image_handler.expired?(image)).to be_truthy
+          expect(image_handler).to be_expired(image)
           image = image_handler.find_by_id 21
-          expect(image_handler.expired?(image)).to be_truthy
+          expect(image_handler).to be_expired(image)
         end
       end
 

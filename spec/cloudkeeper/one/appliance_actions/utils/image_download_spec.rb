@@ -24,9 +24,9 @@ describe Cloudkeeper::One::ApplianceActions::Utils::ImageDownload do
       expect(path1).not_to eq(path2)
       expect(path2).not_to eq(path3)
 
-      expect(path1.start_with?(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])).to be_truthy
-      expect(path2.start_with?(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])).to be_truthy
-      expect(path3.start_with?(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])).to be_truthy
+      expect(path1).to be_start_with(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])
+      expect(path2).to be_start_with(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])
+      expect(path3).to be_start_with(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])
     end
   end
 
@@ -89,7 +89,7 @@ describe Cloudkeeper::One::ApplianceActions::Utils::ImageDownload do
       it 'downloads image to file with generated name' do
         filename = image_download.download_image url, username, password
         expect(Digest::MD5.file(filename).hexdigest).to eq('fac38ff3ef782be59900c1919d901063')
-        expect(filename.start_with?(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])).to be_truthy
+        expect(filename).to be_start_with(Cloudkeeper::One::Settings[:'appliances-tmp-dir'])
       end
     end
 
