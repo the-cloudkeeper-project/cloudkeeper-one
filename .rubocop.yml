@@ -1,7 +1,7 @@
 require: rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.0
+  TargetRubyVersion: 2.2
   Exclude:
     - 'vendor/**/*'
     - 'lib/cloudkeeper_grpc/*'

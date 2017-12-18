@@ -46,7 +46,7 @@ describe Cloudkeeper::One::ApplianceActions::Discard do
     let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
 
     context 'with images with specified identifier in OpenNebula' do
-      context 'which are used' do
+      context 'when used' do
         it 'expires images with specified identifier in OpenNebula' do
           discard.discard_images :find_by_appliance_id, 'qwerty123'
           image = image_handler.find_by_id 18
@@ -56,7 +56,7 @@ describe Cloudkeeper::One::ApplianceActions::Discard do
         end
       end
 
-      context 'which are not used' do
+      context 'when not used' do
         it 'discards images with specified identifier from OpenNebula' do
           discard.discard_images :find_by_appliance_id, 'qwerty123'
           expect(image_handler.find_by_id(18)).to be_nil
@@ -143,7 +143,7 @@ describe Cloudkeeper::One::ApplianceActions::Discard do
         end
       end
 
-      context 'withotu errors' do
+      context 'without errors' do
         it 'iterates over all items' do
           expect do
             discard.send(:handle_iteration, [1, 2, 3]) { |item| raise Cloudkeeper::One::Errors::ArgumentError if item == 5 }
