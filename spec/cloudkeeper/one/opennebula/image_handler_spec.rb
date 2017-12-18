@@ -171,14 +171,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
       end
     end
 
-    context 'image is not ready within a timeout' do
+    context 'when image is not ready within a timeout' do
       it 'raises ApiCallTimeoutError' do
         expect { handler.register image_template, datastore, group }.to \
           raise_error(Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError)
       end
     end
 
-    context 'image goes into error state' do
+    context 'when image goes into error state' do
       it 'raises ResourceStateError' do
         expect { handler.register image_template, datastore, group }.to \
           raise_error(Cloudkeeper::One::Errors::Opennebula::ResourceStateError)

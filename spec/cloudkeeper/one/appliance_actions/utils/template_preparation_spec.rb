@@ -9,12 +9,10 @@ describe Cloudkeeper::One::ApplianceActions::Utils::TemplatePreparation do
       Struct.new(:identifier, :title, :description, :mpuri, :group, :ram, :core, :version, :architecture,
                  :operating_system, :vo, :expiration_date, :image_list_identifier, :attributes)
     end
-    let(:image) { Struct.new(:uri, :checksum, :size, :format) }
     let(:data) do
       {
         message: 'It\'s alive!',
-        appliance: appliance.new('qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', answer: 42),
-        image: image.new('', 123, '', 'qcow2')
+        appliance: appliance.new('qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', answer: 42)
       }
     end
 

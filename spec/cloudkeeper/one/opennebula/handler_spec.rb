@@ -62,13 +62,13 @@ describe Cloudkeeper::One::Opennebula::Handler do
       handler.pool = OpenNebula::ImagePool.new handler.client
     end
 
-    context 'if element with specified name exists' do
+    context 'when element with specified name exists' do
       it 'returns element with specified name from the pool' do
         expect(handler.find_by_name('ttylinux03').id).to eq(3)
       end
     end
 
-    context 'if there is no element with specified name' do
+    context 'when there is no element with specified name' do
       it 'returns nil' do
         expect(handler.find_by_name('nonexistingname')).to be_nil
       end
@@ -80,13 +80,13 @@ describe Cloudkeeper::One::Opennebula::Handler do
       handler.pool = OpenNebula::ImagePool.new handler.client
     end
 
-    context 'if element with specified id exists' do
+    context 'when element with specified id exists' do
       it 'returns element with specified id from the pool' do
         expect(handler.find_by_id(3).name).to eq('ttylinux03')
       end
     end
 
-    context 'if there is no element with specified id' do
+    context 'when there is no element with specified id' do
       it 'returns nil' do
         expect(handler.find_by_id(42)).to be_nil
       end
@@ -98,13 +98,13 @@ describe Cloudkeeper::One::Opennebula::Handler do
       handler.pool = OpenNebula::ImagePool.new handler.client
     end
 
-    context 'if element with specified id exists' do
+    context 'when element with specified id exists' do
       it 'returns true' do
         expect(handler).to be_exist(3)
       end
     end
 
-    context 'if there is no element with specified id' do
+    context 'when there is no element with specified id' do
       it 'returns false' do
         expect(handler).not_to be_exist(42)
       end
@@ -200,7 +200,7 @@ describe Cloudkeeper::One::Opennebula::Handler do
       end
     end
 
-    context 'on pool with info_mine! method' do
+    context 'with pool with info_mine! method' do
       before do
         handler.pool = OpenNebula::ImagePool.new handler.client
         allow(handler.pool).to receive(:info_mine!)
@@ -212,15 +212,17 @@ describe Cloudkeeper::One::Opennebula::Handler do
       end
     end
 
-    context 'on pool without info_mine! method' do
-      before do
-        handler.pool = OpenNebula::DatastorePool.new handler.client
-        allow(handler.pool).to receive(:info!)
-      end
+    if OpenNebula::VERSION < '5.4.3'
+      context 'with pool without info_mine! method' do
+        before do
+          handler.pool = OpenNebula::DatastorePool.new handler.client
+          allow(handler.pool).to receive(:info!)
+        end
 
-      it 'calls info! method on pool' do
-        handler.send(:reload!)
-        expect(handler.pool).to have_received(:info!)
+        it 'calls info! method on pool' do
+          handler.send(:reload!)
+          expect(handler.pool).to have_received(:info!)
+        end
       end
     end
   end

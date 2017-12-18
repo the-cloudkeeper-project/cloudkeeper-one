@@ -68,46 +68,26 @@ describe Cloudkeeper::One::ApplianceActions::List do
         expect(proto_appliance.expiration_date).to eq(0)
         expect(proto_appliance.image_list_identifier).to eq('1a2b3c')
         expect(proto_appliance.attributes).to eq('answer' => '42')
-        proto_image = proto_appliance.image
-        expect(proto_image.mode).to eq(:LOCAL)
-        expect(proto_image.location).to eq('')
-        expect(proto_image.format).to eq(:RAW)
-        expect(proto_image.checksum).to eq('123abc')
-        expect(proto_image.size).to eq(7)
-        expect(proto_image.uri).to eq('some_uri_whatever')
+        expect(proto_appliance.image).to be_nil
       end
     end
   end
 
-  describe '.find_image_for_template', :vcr do
+  describe '.check_image_for_template!', :vcr do
     context 'with image coresponding to template' do
       let(:template) { Cloudkeeper::One::Opennebula::TemplateHandler.new.find_by_id 15 }
 
-      it 'returns the image' do
-        expect(list.send(:find_image_for_template, template)).not_to be_nil
+      it 'does not raise an exception' do
+        expect { list.send(:check_image_for_template!, template) }.not_to raise_error
       end
     end
 
-    context 'wtih no coresponding image' do
+    context 'with no coresponding image' do
       let(:template) { Cloudkeeper::One::Opennebula::TemplateHandler.new.find_by_id 7 }
 
       it 'raises ListingError' do
-        expect { list.send(:find_image_for_template, template) }.to raise_error(Cloudkeeper::One::Errors::Actions::ListingError)
+        expect { list.send(:check_image_for_template!, template) }.to raise_error(Cloudkeeper::One::Errors::Actions::ListingError)
       end
-    end
-  end
-
-  describe '.populate_proto_image', :vcr do
-    let(:image) { Cloudkeeper::One::Opennebula::ImageHandler.new.find_by_id 24 }
-
-    it 'populates proto image structure' do
-      proto_image = list.send(:populate_proto_image, image)
-      expect(proto_image.mode).to eq(:LOCAL)
-      expect(proto_image.location).to eq('')
-      expect(proto_image.format).to eq(:RAW)
-      expect(proto_image.checksum).to eq('123abc')
-      expect(proto_image.size).to eq(7)
-      expect(proto_image.uri).to eq('some_uri_whatever')
     end
   end
 
@@ -116,7 +96,7 @@ describe Cloudkeeper::One::ApplianceActions::List do
     let(:template) { Cloudkeeper::One::Opennebula::TemplateHandler.new.find_by_id 15 }
 
     it 'populates proto appliance and image structures' do
-      proto_appliance = list.send(:populate_proto_appliance, template, image)
+      proto_appliance = list.send(:populate_proto_appliance, template)
       expect(proto_appliance.identifier).to eq('qwerty123')
       expect(proto_appliance.description).to eq('')
       expect(proto_appliance.mpuri).to eq('')
@@ -131,13 +111,7 @@ describe Cloudkeeper::One::ApplianceActions::List do
       expect(proto_appliance.expiration_date).to eq(0)
       expect(proto_appliance.image_list_identifier).to eq('')
       expect(proto_appliance.attributes).to eq('answer' => '42')
-      proto_image = proto_appliance.image
-      expect(proto_image.mode).to eq(:LOCAL)
-      expect(proto_image.location).to eq('')
-      expect(proto_image.format).to eq(:RAW)
-      expect(proto_image.checksum).to eq('123abc')
-      expect(proto_image.size).to eq(7)
-      expect(proto_image.uri).to eq('some_uri_whatever')
+      expect(proto_appliance.image).to be_nil
     end
   end
 end
