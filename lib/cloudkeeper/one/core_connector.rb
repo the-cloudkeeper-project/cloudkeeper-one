@@ -97,9 +97,8 @@ module Cloudkeeper
       end
 
       def finalize_return_value(return_value, default_return_value, use_return_value)
-        return_value = use_return_value ? return_value : default_return_value
-
-        return_value
+        return return_value if return_value && use_return_value
+        default_return_value
       end
     end
   end
