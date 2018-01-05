@@ -1,0 +1,18 @@
+[Unit]
+Description="Cloudkeeper-one gRPC Service"
+After=network.target
+
+[Service]
+Type=simple
+User=cloudkeeper-one
+Group=cloudkeeper-one
+PermissionsStartOnly=true
+Restart=always
+
+ExecStartPre=/bin/mkdir -p /var/run/cloudkeeper-one /var/lock/cloudkeeper-one /var/log/cloudkeeper-one /var/spool/cloudkeeper-one/appliances
+ExecStartPre=/bin/chown -R cloudkeeper-one:cloudkeeper-one /var/run/cloudkeeper-one /var/lock/cloudkeeper-one /var/log/cloudkeeper-one /var/spool/cloudkeeper-one
+
+ExecStart="/opt/cloudkeeper-one/bin/cloudkeeper-one"
+
+[Install]
+WantedBy=multi-user.target
