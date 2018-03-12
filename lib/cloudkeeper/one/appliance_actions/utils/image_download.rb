@@ -27,7 +27,7 @@ module Cloudkeeper
 
               http.request(request) do |response|
                 response.value
-                open(filename, 'w') { |file| response.read_body { |chunk| file.write(chunk) } }
+                File.open(filename, 'w') { |file| response.read_body { |chunk| file.write(chunk) } }
               end
             end
             logger.debug "Image stored into #{filename}"
