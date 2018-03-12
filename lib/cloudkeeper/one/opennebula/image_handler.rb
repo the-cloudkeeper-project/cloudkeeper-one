@@ -84,7 +84,10 @@ module Cloudkeeper
 
           timeout do
             until ready? image
-              raise Cloudkeeper::One::Errors::Opennebula::ResourceStateError, image['TEMPLATE/ERROR'] if error? image
+              if error? image
+                delete image
+                raise Cloudkeeper::One::Errors::Opennebula::ResourceStateError, image['TEMPLATE/ERROR']
+              end
               sleep(Cloudkeeper::One::Opennebula::Handler::API_POLLING_WAIT)
             end
           end
