@@ -179,7 +179,7 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
     end
 
     context 'when image goes into error state' do
-      it 'raises ResourceStateError' do
+      it 'removes failed image and raises ResourceStateError' do
         expect { handler.register image_template, datastore, group }.to \
           raise_error(Cloudkeeper::One::Errors::Opennebula::ResourceStateError)
       end
