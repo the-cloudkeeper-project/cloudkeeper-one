@@ -12,5 +12,14 @@
 <%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_VO %> = "<%= appliance.vo %>"
 <%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_EXPIRATION_DATE %> = "<%= appliance.expiration_date %>"
 <%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_IMAGE_LIST_ID %> = "<%= appliance.image_list_identifier %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_BASE_MPURI %> = "<%= appliance.base_mpuri %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_APPID %> = "<%= appliance.appid %>"
+<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_DIGEST %> = "<%= appliance.digest %>"
 
-<%= Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ATTRIBUTES %> = "<%= Base64.strict_encode64 appliance.attributes.to_h.to_json %>"
+<% if image %>
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_URI %> = "<%= image.uri %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_CHECKSUM %> = "<%= image.checksum %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_SIZE %> = "<%= image.size %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_FORMAT %> = "<%= image.format %>"
+<%= Cloudkeeper::One::Opennebula::Tags::IMAGE_DIGEST %> = "<%= image.digest %>"
+<% end %>

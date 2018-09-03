@@ -17,9 +17,9 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 MOCK_DIR = File.join(File.dirname(__FILE__), 'mock')
 
-Image = Struct.new(:location, :username, :password, :mode, :format, :uri, :checksum)
+Image = Struct.new(:location, :username, :password, :mode, :format, :uri, :checksum, :digest)
 Appliance = Struct.new(:identifier, :title, :description, :mpuri, :group, :ram, :core, :version, :architecture, :operating_system, :vo,
-                       :expiration_date, :image_list_identifier, :attributes, :image)
+                       :expiration_date, :image_list_identifier, :image, :base_mpuri, :appid, :digest)
 
 WebMock.disable_net_connect!(allow_localhost: true)
 

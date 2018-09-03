@@ -4,7 +4,7 @@ module Cloudkeeper
       module Update
         include Utils::TemplatePreparation
 
-        def update_appliance_metadata(proto_appliance)
+        def update_metadata(proto_appliance)
           raise Cloudkeeper::One::Errors::ArgumentError, 'appliance cannot be nil' unless proto_appliance
 
           templates = template_handler.find_by_appliance_id proto_appliance.identifier
@@ -25,7 +25,7 @@ module Cloudkeeper
 
         def update_template(template, image, proto_appliance)
           logger.debug "Updating template metadata for appliance #{proto_appliance.identifier.inspect}"
-          template_template = prepare_template 'template.erb', appliance: proto_appliance, name: template.name, image_id: image.id
+          template_template = prepare_template 'template.erb', appliance: proto_appliance, image: proto_appliance.image, name: template.name, image_id: image.id
           template_handler.update template, template_template
         end
       end

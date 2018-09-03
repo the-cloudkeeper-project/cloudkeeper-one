@@ -23,8 +23,8 @@ module Cloudkeeper
           templates.uniq! { |template| template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ID}"] }
 
           appliances = templates.map do |template|
-            check_image_for_template! template
-            populate_proto_appliance template
+            image = find_image_for_template template
+            populate_proto_appliance template, image
           end
 
           logger.debug "Appliances: #{appliances.map(&:identifier).inspect}"
@@ -33,12 +33,14 @@ module Cloudkeeper
 
         private
 
-        def check_image_for_template!(template)
+        def find_image_for_template(template)
+          image = image_handler.find_by_name template.name
           raise Cloudkeeper::One::Errors::Actions::ListingError, "Missing coresponding image for template #{template.id.inspect}" \
-            unless image_handler.find_by_name template.name
+            unless image
+          image
         end
 
-        def populate_proto_appliance(template)
+        def populate_proto_appliance(template, image)
           CloudkeeperGrpc::Appliance.new identifier: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ID}"].to_s,
                                          description: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_DESCRIPTION}"].to_s,
                                          mpuri: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_MPURI}"].to_s,
@@ -50,10 +52,21 @@ module Cloudkeeper
                                          architecture: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ARCHITECTURE}"].to_s,
                                          operating_system: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_OPERATING_SYSTEM}"].to_s,
                                          vo: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_VO}"].to_s,
-                                         image: nil,
+                                         image: populate_proto_image(image),
                                          expiration_date: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_EXPIRATION_DATE}"].to_i,
                                          image_list_identifier: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_IMAGE_LIST_ID}"].to_s,
-                                         attributes: JSON.parse(Base64.strict_decode64(template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_ATTRIBUTES}"]))
+                                         base_mpuri: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_BASE_MPURI}"].to_s,
+                                         appid: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_APPID}"].to_s,
+                                         digest: template["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::APPLIANCE_DIGEST}"].to_s
+        end
+
+        def populate_proto_image(image)
+          CloudkeeperGrpc::Image.new mode: :LOCAL, location: '',
+                                     format: image["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::IMAGE_FORMAT}"].upcase.to_sym,
+                                     checksum: image["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::IMAGE_CHECKSUM}"].to_s,
+                                     size: image["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::IMAGE_SIZE}"].to_i,
+                                     uri: image["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::IMAGE_URI}"].to_s,
+                                     digest: image["TEMPLATE/#{Cloudkeeper::One::Opennebula::Tags::IMAGE_DIGEST}"].to_s
         end
       end
     end

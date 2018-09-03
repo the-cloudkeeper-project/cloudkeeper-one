@@ -29,7 +29,7 @@ describe Cloudkeeper::One::ApplianceActions::Update do
     let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
     let(:template) { template_handler.find_by_id 15 }
     let(:appliance) do
-      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', { answer: 42 }, nil
+      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', nil, '', '', ''
     end
 
     it 'updates template' do
@@ -42,7 +42,7 @@ describe Cloudkeeper::One::ApplianceActions::Update do
     let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
     let(:image) { image_handler.find_by_id 24 }
     let(:appliance) do
-      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', { answer: 42 }, nil
+      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', nil, '', '', ''
     end
 
     it 'updates template' do
@@ -51,15 +51,15 @@ describe Cloudkeeper::One::ApplianceActions::Update do
     end
   end
 
-  describe '.update_appliance_metadata', :vcr do
+  describe '.update_metadata', :vcr do
     let(:appliance) do
-      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', { answer: 42 }, nil
+      Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '42', '', '', 'rspec-group', '', '', nil, '', '', ''
     end
     let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
     let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
 
     it 'updates appliance' do
-      update.update_appliance_metadata appliance
+      update.update_metadata appliance
       expect(template_handler.find_by_id(15)['TEMPLATE/CLOUDKEEPER_APPLIANCE_VERSION']).to eq('42')
       expect(image_handler.find_by_id(24)['TEMPLATE/CLOUDKEEPER_APPLIANCE_VERSION']).to eq('42')
     end

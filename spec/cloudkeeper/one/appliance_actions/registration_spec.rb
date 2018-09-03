@@ -48,10 +48,12 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
 
     context 'with all well and good', :vcr do
       let(:image) do
-        Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123abc'
+        Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123',
+                  '1b3a14fe8134'
       end
       let(:appliance) do
-        Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'rspec-group', '', '', { answer: 42 }, image
+        Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'rspec-group', '', '', image, '', '123',
+                      'b1ea3153bc15'
       end
       let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
       let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
@@ -91,8 +93,11 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
     end
 
     context 'with remote image', :vcr do
-      let(:image) { Image.new 'http://localhost:9292/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :REMOTE, 'raw', '', '123abc' }
-      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', { answer: 42 }, image }
+      let(:image) do
+        Image.new 'http://localhost:9292/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :REMOTE, 'raw', '', '123abc',
+                  '1b3a14fe8134'
+      end
+      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', image, '', '123', 'ab12078' }
 
       before do
         dir = File.join('/', 'tmp', 'cloudkeeper-spec-register-image')
@@ -112,9 +117,10 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
 
     context 'with local image', :vcr do
       let(:image) do
-        Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123abc'
+        Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123',
+                  '1b3a14fe8134'
       end
-      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', { answer: 42 }, image }
+      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', image, '', '123', 'ab12078' }
 
       it 'registers image in OpenNebula' do
         registration.send(:register_image, appliance, datastore, group)
@@ -129,7 +135,7 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
     let(:group) { group_handler.find_by_id 100 }
     let(:image_id) { 32 }
     let(:name) { 'qwerty123@spec' }
-    let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', { answer: 42 }, nil }
+    let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', nil, '', '123', 'ab12078e' }
 
     context 'with no appliance' do
       let(:group) { instance_double(OpenNebula::Group) }
@@ -157,7 +163,7 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
 
     context 'with appliance with alrerady existing template' do
       let(:image) { Struct.new(:id, :name).new 123, name }
-      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'XYZ', '', '', { answer: 42 }, nil }
+      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'XYZ', '', '', nil, '', '123', 'ab12078e' }
 
       it 'updates template' do
         expect(template_handler.find_by_name(name)).not_to be_nil
@@ -168,7 +174,7 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
 
     context 'with appliance without a template' do
       let(:image) { Struct.new(:id, :name).new 123, name }
-      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', { answer: 42 }, nil }
+      let(:appliance) { Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', nil, '', '123', 'ab12078e' }
 
       it 'registers template' do
         registration.send(:register_or_update_template, appliance, image, group)

@@ -11,7 +11,7 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
 
   describe '#new' do
     it 'creates an instance of Handler' do
-      is_expected.to be_instance_of described_class
+      expect(handler).to be_instance_of described_class
     end
 
     it 'sets cloudkeeper instance identifier' do
