@@ -11,11 +11,21 @@ Metrics/LineLength:
   Exclude:
     - 'lib/cloudkeeper/one/appliance_actions/list.rb'
 
+Metrics/LineLength:
+  Max: 140
+  Include:
+    - 'lib/cloudkeeper/one/core_connector.rb'
+
 Style/Documentation:
   Enabled: false
 
 Metrics/MethodLength:
   Max: 15
+
+Metrics/MethodLength:
+  Max: 20
+  Include:
+    - 'lib/cloudkeeper/one/appliance_actions/list.rb'
 
 Metrics/AbcSize:
   Max: 20

@@ -7,12 +7,12 @@ describe Cloudkeeper::One::ApplianceActions::Utils::TemplatePreparation do
     let(:template_file) { 'spec.erb' }
     let(:appliance) do
       Struct.new(:identifier, :title, :description, :mpuri, :group, :ram, :core, :version, :architecture,
-                 :operating_system, :vo, :expiration_date, :image_list_identifier, :attributes)
+                 :operating_system, :vo, :expiration_date, :image_list_identifier, :base_mpuri, :appid, :digest)
     end
     let(:data) do
       {
         message: 'It\'s alive!',
-        appliance: appliance.new('qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', answer: 42)
+        appliance: appliance.new('qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'DA', '', '', '', '123', 'abc1234ed5')
       }
     end
 

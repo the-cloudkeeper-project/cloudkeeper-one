@@ -22,12 +22,15 @@ module Cloudkeeper
         APPLIANCE_VO = "#{APPLIANCE}_VO".freeze
         APPLIANCE_EXPIRATION_DATE = "#{APPLIANCE}_EXPIRATION_DATE".freeze
         APPLIANCE_IMAGE_LIST_ID = "#{APPLIANCE}_IMAGE_LIST_ID".freeze
-        APPLIANCE_ATTRIBUTES = "#{APPLIANCE}_ATTRIBUTES".freeze
+        APPLIANCE_BASE_MPURI = "#{APPLIANCE}_BASE_MPURI".freeze
+        APPLIANCE_APPID = "#{APPLIANCE}_APPID".freeze
+        APPLIANCE_DIGEST = "#{APPLIANCE}_DIGEST".freeze
 
         IMAGE_URI = "#{IMAGE}_URI".freeze
         IMAGE_CHECKSUM = "#{IMAGE}_CHECKSUM".freeze
         IMAGE_SIZE = "#{IMAGE}_SIZE".freeze
         IMAGE_FORMAT = "#{IMAGE}_FORMAT".freeze
+        IMAGE_DIGEST = "#{IMAGE}_DIGEST".freeze
       end
     end
   end
