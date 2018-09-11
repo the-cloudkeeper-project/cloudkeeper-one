@@ -106,6 +106,7 @@ module Cloudkeeper
         grpc_server.run_till_terminated
       rescue SignalException => ex
         raise ex unless SIGNALS.include? ex.signo
+
         grpc_server.stop
       rescue Cloudkeeper::One::Errors::InvalidConfigurationError => ex
         abort ex.message
