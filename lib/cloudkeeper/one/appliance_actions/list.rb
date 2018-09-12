@@ -37,6 +37,7 @@ module Cloudkeeper
           image = image_handler.find_by_name template.name
           raise Cloudkeeper::One::Errors::Actions::ListingError, "Missing coresponding image for template #{template.id.inspect}" \
             unless image
+
           image
         end
 

@@ -68,12 +68,12 @@ module Cloudkeeper
                     type: :string,
                     desc: 'UNIX-like permissions appliances will have within OpenNebula'
       method_option :'opennebula-secret',
-                    required: true,
+                    required: false,
                     default: Cloudkeeper::One::Settings['opennebula']['secret'],
                     type: :string,
                     desc: 'OpenNebula authentication secret'
       method_option :'opennebula-endpoint',
-                    required: true,
+                    required: false,
                     default: Cloudkeeper::One::Settings['opennebula']['endpoint'],
                     type: :string,
                     desc: 'OpenNebula XML-RPC endpoint'
@@ -106,6 +106,7 @@ module Cloudkeeper
         grpc_server.run_till_terminated
       rescue SignalException => ex
         raise ex unless SIGNALS.include? ex.signo
+
         grpc_server.stop
       rescue Cloudkeeper::One::Errors::InvalidConfigurationError => ex
         abort ex.message
