@@ -47,6 +47,10 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['identifier'],
                     type: :string,
                     desc: 'Instance identifier'
+      method_option :public,
+                    default: Cloudkeeper::One::Settings['public'],
+                    type: :boolean,
+                    desc: 'Run in public mode'
       method_option :'core-certificate',
                     required: false,
                     default: Cloudkeeper::One::Settings['core']['certificate'],
@@ -96,6 +100,11 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['opennebula']['allow-remote-source'],
                     type: :boolean,
                     desc: 'Allows OpenNebula to directly download remote image'
+      method_option :'opennebula-public-group',
+                    default: Cloudkeeper::One::Settings['opennebula']['public-group'],
+                    required: false,
+                    type: :string,
+                    desc: 'Group to register appliances under in public mode'
 
       desc 'sync', 'Runs synchronization process'
       def sync
@@ -135,6 +144,9 @@ module Cloudkeeper
         validate_configuration_group! :authentication,
                                       %i[certificate key core-certificate],
                                       'Authentication configuration missing'
+        validate_configuration_group! :public,
+                                      %i[opennebula-public-group],
+                                      'Public mode configuration missing'
       end
 
       def validate_configuration_group!(flag, required_options, error_message)

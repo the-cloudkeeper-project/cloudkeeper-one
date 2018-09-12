@@ -1,0 +1,847 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.grouppool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '174'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2408'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:38 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;GROUP_POOL&gt;\n   &lt;GROUP&gt;\n      &lt;ID&gt;0&lt;/ID&gt;\n      &lt;NAME&gt;oneadmin&lt;/NAME&gt;\n      &lt;TEMPLATE /&gt;\n      &lt;USERS&gt;\n         &lt;ID&gt;0&lt;/ID&gt;\n         &lt;ID&gt;1&lt;/ID&gt;\n      &lt;/USERS&gt;\n      &lt;ADMINS /&gt;\n   &lt;/GROUP&gt;\n   &lt;QUOTAS&gt;\n      &lt;ID&gt;0&lt;/ID&gt;\n      &lt;DATASTORE_QUOTA /&gt;\n      &lt;NETWORK_QUOTA /&gt;\n      &lt;VM_QUOTA /&gt;\n      &lt;IMAGE_QUOTA /&gt;\n   &lt;/QUOTAS&gt;\n   &lt;GROUP&gt;\n      &lt;ID&gt;1&lt;/ID&gt;\n      &lt;NAME&gt;users&lt;/NAME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;SUNSTONE&gt;\n            &lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;\n            &lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;\n         &lt;/SUNSTONE&gt;\n      &lt;/TEMPLATE&gt;\n      &lt;USERS&gt;\n         &lt;ID&gt;2&lt;/ID&gt;\n         &lt;ID&gt;3&lt;/ID&gt;\n      &lt;/USERS&gt;\n      &lt;ADMINS /&gt;\n   &lt;/GROUP&gt;\n   &lt;QUOTAS&gt;\n      &lt;ID&gt;1&lt;/ID&gt;\n      &lt;DATASTORE_QUOTA /&gt;\n      &lt;NETWORK_QUOTA /&gt;\n      &lt;VM_QUOTA /&gt;\n      &lt;IMAGE_QUOTA /&gt;\n   &lt;/QUOTAS&gt;\n   &lt;GROUP&gt;\n      &lt;ID&gt;100&lt;/ID&gt;\n      &lt;NAME&gt;rspec-group&lt;/NAME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;SUNSTONE&gt;\n            &lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;\n            &lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;\n         &lt;/SUNSTONE&gt;\n      &lt;/TEMPLATE&gt;\n      &lt;USERS /&gt;\n      &lt;ADMINS /&gt;\n   &lt;/GROUP&gt;\n   &lt;GROUP&gt;\n      &lt;ID&gt;101&lt;/ID&gt;\n      &lt;NAME&gt;rspec-group-public&lt;/NAME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;SUNSTONE&gt;\n            &lt;DEFAULT_VIEW&gt;&lt;![CDATA[cloud]]&gt;&lt;/DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_DEFAULT_VIEW&gt;&lt;![CDATA[groupadmin]]&gt;&lt;/GROUP_ADMIN_DEFAULT_VIEW&gt;\n            &lt;GROUP_ADMIN_VIEWS&gt;&lt;![CDATA[groupadmin,cloud]]&gt;&lt;/GROUP_ADMIN_VIEWS&gt;\n            &lt;VIEWS&gt;&lt;![CDATA[cloud]]&gt;&lt;/VIEWS&gt;\n         &lt;/SUNSTONE&gt;\n      &lt;/TEMPLATE&gt;\n      &lt;USERS /&gt;\n      &lt;ADMINS /&gt;\n   &lt;/GROUP&gt;\n   &lt;QUOTAS&gt;\n      &lt;ID&gt;100&lt;/ID&gt;\n      &lt;DATASTORE_QUOTA /&gt;\n      &lt;NETWORK_QUOTA /&gt;\n      &lt;VM_QUOTA /&gt;\n      &lt;IMAGE_QUOTA /&gt;\n   &lt;/QUOTAS&gt;\n   &lt;QUOTAS&gt;\n      &lt;ID&gt;101&lt;/ID&gt;\n      &lt;DATASTORE_QUOTA /&gt;\n      &lt;NETWORK_QUOTA /&gt;\n      &lt;VM_QUOTA /&gt;\n      &lt;IMAGE_QUOTA /&gt;\n   &lt;/QUOTAS&gt;\n   &lt;DEFAULT_GROUP_QUOTAS&gt;\n      &lt;DATASTORE_QUOTA /&gt;\n      &lt;NETWORK_QUOTA /&gt;\n      &lt;VM_QUOTA /&gt;\n      &lt;IMAGE_QUOTA /&gt;\n   &lt;/DEFAULT_GROUP_QUOTAS&gt;\n&lt;/GROUP_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:39 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '10752'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:38 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488793793&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/7bdd51214aef537ee23b0f2acebb9128]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;25&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux01&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886295&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/7bdd51214aef537ee23b0f2acebb9128]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;30&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886450&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/9d021af4898d277baad5a57993e4a273]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;31&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886455&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/7c6a91274805118d56363f12e902d0fd]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;32&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886459&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8ea1b5cea07f5668d4e40d146a962c8f]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;33&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886463&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/50e3a7237009676d32af0e57af2ab6c6]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[333]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:39 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.datastorepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '178'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '6249'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:38 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;DATASTORE_POOL&gt;&lt;DATASTORE&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;system&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[-]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/0]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;1&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;0&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;0&lt;/FREE_MB&gt;&lt;USED_MB&gt;0&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[FILE]]&gt;&lt;/DISK_TYPE&gt;&lt;DS_MIGRATE&gt;&lt;![CDATA[YES]]&gt;&lt;/DS_MIGRATE&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;SHARED&gt;&lt;![CDATA[NO]]&gt;&lt;/SHARED&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[SYSTEM_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;DATASTORE&gt;&lt;ID&gt;1&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;default&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;9207&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;7356&lt;/FREE_MB&gt;&lt;USED_MB&gt;1361&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;ID&gt;25&lt;/ID&gt;&lt;ID&gt;30&lt;/ID&gt;&lt;ID&gt;31&lt;/ID&gt;&lt;ID&gt;32&lt;/ID&gt;&lt;ID&gt;33&lt;/ID&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;CLONE_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/CLONE_TARGET&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[FILE]]&gt;&lt;/DISK_TYPE&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;LN_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/LN_TARGET&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[IMAGE_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;DATASTORE&gt;&lt;ID&gt;2&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;files&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/2]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;2&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;9207&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;7356&lt;/FREE_MB&gt;&lt;USED_MB&gt;1361&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;CLONE_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/CLONE_TARGET&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;LN_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/LN_TARGET&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/var/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[FILE_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;DATASTORE&gt;&lt;ID&gt;100&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;BASE_PATH&gt;&lt;![CDATA[/var/lib/one//datastores/100]]&gt;&lt;/BASE_PATH&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;STATE&gt;0&lt;/STATE&gt;&lt;CLUSTERS&gt;&lt;ID&gt;0&lt;/ID&gt;&lt;/CLUSTERS&gt;&lt;TOTAL_MB&gt;9207&lt;/TOTAL_MB&gt;&lt;FREE_MB&gt;7356&lt;/FREE_MB&gt;&lt;USED_MB&gt;1361&lt;/USED_MB&gt;&lt;IMAGES&gt;&lt;/IMAGES&gt;&lt;TEMPLATE&gt;&lt;CLONE_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/CLONE_TARGET&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[FILE]]&gt;&lt;/DISK_TYPE&gt;&lt;DS_MAD&gt;&lt;![CDATA[fs]]&gt;&lt;/DS_MAD&gt;&lt;LN_TARGET&gt;&lt;![CDATA[SYSTEM]]&gt;&lt;/LN_TARGET&gt;&lt;RESTRICTED_DIRS&gt;&lt;![CDATA[/]]&gt;&lt;/RESTRICTED_DIRS&gt;&lt;SAFE_DIRS&gt;&lt;![CDATA[/tmp]]&gt;&lt;/SAFE_DIRS&gt;&lt;TM_MAD&gt;&lt;![CDATA[ssh]]&gt;&lt;/TM_MAD&gt;&lt;TYPE&gt;&lt;![CDATA[IMAGE_DS]]&gt;&lt;/TYPE&gt;&lt;/TEMPLATE&gt;&lt;/DATASTORE&gt;&lt;/DATASTORE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:39 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>one.image.allocate</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><string>NAME = "qwerty123@rspec-datastore"
+        DESCRIPTION = "Spec!"
+        TYPE = "OS"
+        DISK_TYPE = "BLOCK"
+        PATH = "/tmp/cloudkeeper-spec-register-image/image.ext"
+        DRIVER = "raw"
+        CLOUDKEEPER_ID = "cloudkeeper-spec"
+        CLOUDKEEPER_APPLIANCE_ID = "qwerty123"
+        CLOUDKEEPER_APPLIANCE_TITLE = "Spec!"
+        CLOUDKEEPER_APPLIANCE_DESCRIPTION = ""
+        CLOUDKEEPER_APPLIANCE_MPURI = ""
+        CLOUDKEEPER_APPLIANCE_GROUP = ""
+        CLOUDKEEPER_APPLIANCE_RAM = ""
+        CLOUDKEEPER_APPLIANCE_CORE = ""
+        CLOUDKEEPER_APPLIANCE_VERSION = ""
+        CLOUDKEEPER_APPLIANCE_ARCHITECTURE = ""
+        CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM = ""
+        CLOUDKEEPER_APPLIANCE_VO = "rspec-group"
+        CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE = ""
+        CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID = ""
+
+        CLOUDKEEPER_IMAGE_URI = ""
+        CLOUDKEEPER_IMAGE_CHECKSUM = "123abc"
+        CLOUDKEEPER_IMAGE_SIZE = "7"
+        CLOUDKEEPER_IMAGE_FORMAT = "raw"
+
+        CLOUDKEEPER_APPLIANCE_ATTRIBUTES = "eyJhbnN3ZXIiOjQyfQ=="
+        </string></value></param><param><value><i4>100</i4></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1135'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:38 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>34</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:40 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3677'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;34&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1489052498&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/100/78fff66e4ba9193790f3f679ff2beaae]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/tmp/cloudkeeper-spec-register-image/image.ext]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;100&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;rspec-datastore&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[BLOCK]]&gt;&lt;/DISK_TYPE&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.chmod</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '572'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>34</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3677'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;34&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1489052498&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/100/78fff66e4ba9193790f3f679ff2beaae]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/tmp/cloudkeeper-spec-register-image/image.ext]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;100&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;rspec-datastore&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[BLOCK]]&gt;&lt;/DISK_TYPE&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3677'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;34&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1489052498&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/100/78fff66e4ba9193790f3f679ff2beaae]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/tmp/cloudkeeper-spec-register-image/image.ext]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;100&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;rspec-datastore&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[BLOCK]]&gt;&lt;/DISK_TYPE&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.chown</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>101</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '295'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>34</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.image.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>34</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '211'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3682'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE&gt;&lt;ID&gt;34&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;100&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;rspec-group&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1489052498&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/100/78fff66e4ba9193790f3f679ff2beaae]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/tmp/cloudkeeper-spec-register-image/image.ext]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;100&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;rspec-datastore&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[BLOCK]]&gt;&lt;/DISK_TYPE&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '10269'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;3&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;6&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1487434005&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;&lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;16&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux01&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488886644&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[444]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;&lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;17&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488886648&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;&lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;18&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488886654&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;&lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;VMTEMPLATE&gt;&lt;ID&gt;19&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1488886660&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[333]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CONTEXT&gt;&lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;&lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;&lt;/CONTEXT&gt;&lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[A
+        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;&lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;&lt;/DISK&gt;&lt;FEATURES&gt;&lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;&lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;&lt;/FEATURES&gt;&lt;GRAPHICS&gt;&lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;&lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;&lt;/GRAPHICS&gt;&lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;&lt;NIC&gt;&lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;&lt;/NIC&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" ?><methodCall><methodName>one.template.allocate</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><string>NAME = "qwerty123@rspec-datastore"
+        DESCRIPTION = "Spec!"
+        MEMORY = ""
+        CPU = ""
+        VCPU = ""
+
+        OS = [
+        ARCH = ""
+        ]
+
+        DISK = [
+        IMAGE_ID = "34"
+        ]
+        CLOUDKEEPER_ID = "cloudkeeper-spec"
+        CLOUDKEEPER_APPLIANCE_ID = "qwerty123"
+        CLOUDKEEPER_APPLIANCE_TITLE = "Spec!"
+        CLOUDKEEPER_APPLIANCE_DESCRIPTION = ""
+        CLOUDKEEPER_APPLIANCE_MPURI = ""
+        CLOUDKEEPER_APPLIANCE_GROUP = ""
+        CLOUDKEEPER_APPLIANCE_RAM = ""
+        CLOUDKEEPER_APPLIANCE_CORE = ""
+        CLOUDKEEPER_APPLIANCE_VERSION = ""
+        CLOUDKEEPER_APPLIANCE_ARCHITECTURE = ""
+        CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM = ""
+        CLOUDKEEPER_APPLIANCE_VO = "rspec-group"
+        CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE = ""
+        CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID = ""
+
+        CLOUDKEEPER_IMAGE_URI = ""
+        CLOUDKEEPER_IMAGE_CHECKSUM = "123abc"
+        CLOUDKEEPER_IMAGE_SIZE = "7"
+        CLOUDKEEPER_IMAGE_FORMAT = "raw"
+
+        CLOUDKEEPER_APPLIANCE_ATTRIBUTES = "eyJhbnN3ZXIiOjQyfQ=="
+        </string></value></param></params></methodCall>
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1072'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>20</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.chmod</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>20</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>0</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>1</i4></value></param><param><value><i4>0</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '625'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>20</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>20</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3008'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;20&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1489052503&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;CPU&gt;&lt;![CDATA[]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE_ID&gt;&lt;![CDATA[34]]&gt;&lt;/IMAGE_ID&gt;&lt;/DISK&gt;&lt;MEMORY&gt;&lt;![CDATA[]]&gt;&lt;/MEMORY&gt;&lt;OS&gt;&lt;ARCH&gt;&lt;![CDATA[]]&gt;&lt;/ARCH&gt;&lt;/OS&gt;&lt;VCPU&gt;&lt;![CDATA[]]&gt;&lt;/VCPU&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>20</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3008'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;20&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1489052503&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;CPU&gt;&lt;![CDATA[]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE_ID&gt;&lt;![CDATA[34]]&gt;&lt;/IMAGE_ID&gt;&lt;/DISK&gt;&lt;MEMORY&gt;&lt;![CDATA[]]&gt;&lt;/MEMORY&gt;&lt;OS&gt;&lt;ARCH&gt;&lt;![CDATA[]]&gt;&lt;/ARCH&gt;&lt;/OS&gt;&lt;VCPU&gt;&lt;![CDATA[]]&gt;&lt;/VCPU&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.chown</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>20</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>101</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '298'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '252'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><i4>20</i4></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.template.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>20</i4></value></param><param><value><boolean>0</boolean></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '264'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '3013'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE&gt;&lt;ID&gt;20&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;100&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;rspec-group&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;REGTIME&gt;1489052503&lt;/REGTIME&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;CPU&gt;&lt;![CDATA[]]&gt;&lt;/CPU&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DISK&gt;&lt;IMAGE_ID&gt;&lt;![CDATA[34]]&gt;&lt;/IMAGE_ID&gt;&lt;/DISK&gt;&lt;MEMORY&gt;&lt;![CDATA[]]&gt;&lt;/MEMORY&gt;&lt;OS&gt;&lt;ARCH&gt;&lt;![CDATA[]]&gt;&lt;/ARCH&gt;&lt;/OS&gt;&lt;VCPU&gt;&lt;![CDATA[]]&gt;&lt;/VCPU&gt;&lt;/TEMPLATE&gt;&lt;/VMTEMPLATE&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.imagepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '297'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '14176'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:41:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;IMAGE_POOL&gt;&lt;IMAGE&gt;&lt;ID&gt;23&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488793793&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/7bdd51214aef537ee23b0f2acebb9128]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/tmp/file.img]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;25&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux01&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886295&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/7bdd51214aef537ee23b0f2acebb9128]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;30&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux02&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886450&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/9d021af4898d277baad5a57993e4a273]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;31&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux03&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886455&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/7c6a91274805118d56363f12e902d0fd]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;32&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux04&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886459&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/8ea1b5cea07f5668d4e40d146a962c8f]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;33&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;0&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;oneadmin&lt;/GNAME&gt;&lt;NAME&gt;ttylinux05&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;0&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;0&lt;/OTHER_U&gt;&lt;OTHER_M&gt;0&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1488886463&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/1/50e3a7237009676d32af0e57af2ab6c6]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/var/lib/one//datastores/1/1db9117f655fce8942f082c86b9c8747]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;1&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;default&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[333]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;IMAGE&gt;&lt;ID&gt;34&lt;/ID&gt;&lt;UID&gt;0&lt;/UID&gt;&lt;GID&gt;101&lt;/GID&gt;&lt;UNAME&gt;oneadmin&lt;/UNAME&gt;&lt;GNAME&gt;rspec-group&lt;/GNAME&gt;&lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;&lt;PERMISSIONS&gt;&lt;OWNER_U&gt;1&lt;/OWNER_U&gt;&lt;OWNER_M&gt;1&lt;/OWNER_M&gt;&lt;OWNER_A&gt;0&lt;/OWNER_A&gt;&lt;GROUP_U&gt;1&lt;/GROUP_U&gt;&lt;GROUP_M&gt;0&lt;/GROUP_M&gt;&lt;GROUP_A&gt;0&lt;/GROUP_A&gt;&lt;OTHER_U&gt;1&lt;/OTHER_U&gt;&lt;OTHER_M&gt;1&lt;/OTHER_M&gt;&lt;OTHER_A&gt;0&lt;/OTHER_A&gt;&lt;/PERMISSIONS&gt;&lt;TYPE&gt;0&lt;/TYPE&gt;&lt;DISK_TYPE&gt;0&lt;/DISK_TYPE&gt;&lt;PERSISTENT&gt;0&lt;/PERSISTENT&gt;&lt;REGTIME&gt;1489052498&lt;/REGTIME&gt;&lt;SOURCE&gt;&lt;![CDATA[/var/lib/one//datastores/100/78fff66e4ba9193790f3f679ff2beaae]]&gt;&lt;/SOURCE&gt;&lt;PATH&gt;&lt;![CDATA[/tmp/cloudkeeper-spec-register-image/image.ext]]&gt;&lt;/PATH&gt;&lt;FSTYPE&gt;&lt;![CDATA[raw]]&gt;&lt;/FSTYPE&gt;&lt;SIZE&gt;1&lt;/SIZE&gt;&lt;STATE&gt;1&lt;/STATE&gt;&lt;RUNNING_VMS&gt;0&lt;/RUNNING_VMS&gt;&lt;CLONING_OPS&gt;0&lt;/CLONING_OPS&gt;&lt;CLONING_ID&gt;-1&lt;/CLONING_ID&gt;&lt;TARGET_SNAPSHOT&gt;-1&lt;/TARGET_SNAPSHOT&gt;&lt;DATASTORE_ID&gt;100&lt;/DATASTORE_ID&gt;&lt;DATASTORE&gt;rspec-datastore&lt;/DATASTORE&gt;&lt;VMS&gt;&lt;/VMS&gt;&lt;CLONES&gt;&lt;/CLONES&gt;&lt;APP_CLONES&gt;&lt;/APP_CLONES&gt;&lt;TEMPLATE&gt;&lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ARCHITECTURE&gt;&lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_CORE&gt;&lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_DESCRIPTION&gt;&lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE&gt;&lt;CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_GROUP&gt;&lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_MPURI&gt;&lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM&gt;&lt;CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_RAM&gt;&lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VERSION&gt;&lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;&lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;&lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;&lt;CLOUDKEEPER_IMAGE_URI&gt;&lt;![CDATA[]]&gt;&lt;/CLOUDKEEPER_IMAGE_URI&gt;&lt;DESCRIPTION&gt;&lt;![CDATA[Spec!]]&gt;&lt;/DESCRIPTION&gt;&lt;DEV_PREFIX&gt;&lt;![CDATA[hd]]&gt;&lt;/DEV_PREFIX&gt;&lt;DISK_TYPE&gt;&lt;![CDATA[BLOCK]]&gt;&lt;/DISK_TYPE&gt;&lt;DRIVER&gt;&lt;![CDATA[raw]]&gt;&lt;/DRIVER&gt;&lt;/TEMPLATE&gt;&lt;SNAPSHOTS&gt;&lt;/SNAPSHOTS&gt;&lt;/IMAGE&gt;&lt;/IMAGE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:41:45 GMT
+- request:
+    method: post
+    uri: http://localhost:2633/RPC2
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" ?><methodCall><methodName>one.templatepool.info</methodName><params><param><value><string>oneadmin:opennebula</string></value></param><param><value><i4>-2</i4></value></param><param><value><i4>-1</i4></value></param><param><value><i4>-1</i4></value></param></params></methodCall>
+
+'
+    headers:
+      User-Agent:
+      - XMLRPC::Client (Ruby 2.3.3)
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '300'
+      Connection:
+      - close
+      Accept-Encoding:
+      - identity
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '10269'
+      Connection:
+      - close
+      Date:
+      - Thu, 09 Mar 2017 09:42:43 UTC
+      Server:
+      - Xmlrpc-c_Abyss/1.40.0
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<methodResponse>\r\n<params>\r\n<param><value><array><data>\r\n<value><boolean>1</boolean></value>\r\n<value><string>&lt;VMTEMPLATE_POOL&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;3&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;6&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux03&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1487434005&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;\n            &lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;16&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux01&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1488886644&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[444]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;\n            &lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;17&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux02&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1488886648&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[111]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;\n            &lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;18&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux04&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1488886654&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[222]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;\n            &lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n   &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;19&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;0&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;ttylinux05&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1488886660&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[aaa]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;&lt;![CDATA[333]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux03]]&gt;&lt;/IMAGE&gt;\n            &lt;IMAGE_UNAME&gt;&lt;![CDATA[oneadmin]]&gt;&lt;/IMAGE_UNAME&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n      &lt;VMTEMPLATE&gt;\n      &lt;ID&gt;42&lt;/ID&gt;\n      &lt;UID&gt;0&lt;/UID&gt;\n      &lt;GID&gt;101&lt;/GID&gt;\n      &lt;UNAME&gt;oneadmin&lt;/UNAME&gt;\n      &lt;GNAME&gt;oneadmin&lt;/GNAME&gt;\n      &lt;NAME&gt;qwerty123@rspec-datastore&lt;/NAME&gt;\n      &lt;PERMISSIONS&gt;\n         &lt;OWNER_U&gt;1&lt;/OWNER_U&gt;\n         &lt;OWNER_M&gt;1&lt;/OWNER_M&gt;\n         &lt;OWNER_A&gt;0&lt;/OWNER_A&gt;\n         &lt;GROUP_U&gt;0&lt;/GROUP_U&gt;\n         &lt;GROUP_M&gt;0&lt;/GROUP_M&gt;\n         &lt;GROUP_A&gt;0&lt;/GROUP_A&gt;\n         &lt;OTHER_U&gt;0&lt;/OTHER_U&gt;\n         &lt;OTHER_M&gt;0&lt;/OTHER_M&gt;\n         &lt;OTHER_A&gt;0&lt;/OTHER_A&gt;\n      &lt;/PERMISSIONS&gt;\n      &lt;REGTIME&gt;1487433957&lt;/REGTIME&gt;\n      &lt;TEMPLATE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ARCHITECTURE /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;&lt;![CDATA[eyJhbnN3ZXIiOjQyfQ==]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ATTRIBUTES&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_CORE /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_DESCRIPTION /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_EXPIRATION_DATE /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_GROUP /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_ID&gt;&lt;![CDATA[qwerty123]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_ID&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_IMAGE_LIST_ID /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_MPURI /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_OPERATING_SYSTEM /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_RAM /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_TITLE&gt;&lt;![CDATA[Spec!]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_TITLE&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_VERSION /&gt;\n         &lt;CLOUDKEEPER_APPLIANCE_VO&gt;&lt;![CDATA[rspec-group]]&gt;&lt;/CLOUDKEEPER_APPLIANCE_VO&gt;\n         &lt;CLOUDKEEPER_ID&gt;&lt;![CDATA[cloudkeeper-spec]]&gt;&lt;/CLOUDKEEPER_ID&gt;\n         &lt;CLOUDKEEPER_IMAGE_CHECKSUM&gt;&lt;![CDATA[123abc]]&gt;&lt;/CLOUDKEEPER_IMAGE_CHECKSUM&gt;\n         &lt;CLOUDKEEPER_IMAGE_FORMAT&gt;&lt;![CDATA[raw]]&gt;&lt;/CLOUDKEEPER_IMAGE_FORMAT&gt;\n         &lt;CLOUDKEEPER_IMAGE_SIZE&gt;&lt;![CDATA[7]]&gt;&lt;/CLOUDKEEPER_IMAGE_SIZE&gt;\n         &lt;CLOUDKEEPER_IMAGE_URI /&gt;\n         &lt;CONTEXT&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[YES]]&gt;&lt;/NETWORK&gt;\n            &lt;SSH_PUBLIC_KEY&gt;&lt;![CDATA[root[SSH_PUBLIC_KEY]]]&gt;&lt;/SSH_PUBLIC_KEY&gt;\n         &lt;/CONTEXT&gt;\n         &lt;CPU&gt;&lt;![CDATA[0.1]]&gt;&lt;/CPU&gt;\n         &lt;DESCRIPTION&gt;&lt;![CDATA[A\n        small GNU/Linux system for testing]]&gt;&lt;/DESCRIPTION&gt;\n         &lt;DISK&gt;\n            &lt;IMAGE&gt;&lt;![CDATA[ttylinux]]&gt;&lt;/IMAGE&gt;\n         &lt;/DISK&gt;\n         &lt;FEATURES&gt;\n            &lt;ACPI&gt;&lt;![CDATA[no]]&gt;&lt;/ACPI&gt;\n            &lt;APIC&gt;&lt;![CDATA[no]]&gt;&lt;/APIC&gt;\n         &lt;/FEATURES&gt;\n         &lt;GRAPHICS&gt;\n            &lt;LISTEN&gt;&lt;![CDATA[0.0.0.0]]&gt;&lt;/LISTEN&gt;\n            &lt;TYPE&gt;&lt;![CDATA[VNC]]&gt;&lt;/TYPE&gt;\n         &lt;/GRAPHICS&gt;\n         &lt;MEMORY&gt;&lt;![CDATA[128]]&gt;&lt;/MEMORY&gt;\n         &lt;NIC&gt;\n            &lt;NETWORK&gt;&lt;![CDATA[cloud]]&gt;&lt;/NETWORK&gt;\n         &lt;/NIC&gt;\n      &lt;/TEMPLATE&gt;\n   &lt;/VMTEMPLATE&gt;\n&lt;/VMTEMPLATE_POOL&gt;</string></value>\r\n<value><i4>0</i4></value>\r\n</data></array></value></param>\r\n</params>\r\n</methodResponse>\r\n"
+    http_version:
+  recorded_at: Thu, 09 Mar 2017 09:42:45 GMT
+recorded_with: VCR 3.0.3

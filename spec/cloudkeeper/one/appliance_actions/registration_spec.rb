@@ -31,37 +31,92 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
   end
 
   describe '.register_or_update_appliance' do
-    context 'wtih nonexisting vo', :vcr do
-      let(:appliance) { Struct.new(:vo).new('nonexistingvo') }
+    context 'with group from vo' do
+      before do
+        Cloudkeeper::One::Settings[:public] = false
+      end
 
-      it 'raises RegistrationError' do
-        expect { registration.register_or_update_appliance appliance }.to \
-          raise_error(Cloudkeeper::One::Errors::Actions::RegistrationError)
+      context 'with nonexisting vo', :vcr do
+        let(:appliance) { Struct.new(:vo).new('nonexistingvo') }
+
+        it 'raises RegistrationError' do
+          expect { registration.register_or_update_appliance appliance }.to \
+            raise_error(Cloudkeeper::One::Errors::Actions::RegistrationError)
+        end
+      end
+
+      context 'with missing appliance' do
+        it 'raise ArgumentError' do
+          expect { registration.register_or_update_appliance nil }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+        end
+      end
+
+      context 'with all well and good', :vcr do
+        let(:image) do
+          Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123',
+                    '1b3a14fe8134'
+        end
+        let(:appliance) do
+          Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'rspec-group', '', '', image, '', '123',
+                        'b1ea3153bc15'
+        end
+        let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
+        let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
+
+        it 'registers or updates appliance' do
+          registration.register_or_update_appliance appliance
+          expect(image_handler.find_by_name('qwerty123@rspec-datastore')).not_to be_nil
+          expect(template_handler.find_by_name('qwerty123@rspec-datastore')).not_to be_nil
+        end
       end
     end
 
-    context 'with missing appliance' do
-      it 'raise ArgumentError' do
-        expect { registration.register_or_update_appliance nil }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+    context 'with public mode' do
+      before do
+        Cloudkeeper::One::Settings[:public] = true
+        Cloudkeeper::One::Settings[:'opennebula-public-group'] = 'rspec-group-public'
       end
-    end
 
-    context 'with all well and good', :vcr do
-      let(:image) do
-        Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123',
-                  '1b3a14fe8134'
-      end
-      let(:appliance) do
-        Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'rspec-group', '', '', image, '', '123',
-                      'b1ea3153bc15'
-      end
-      let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
-      let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
+      context 'with nonexisting group', :vcr do
+        before do
+          Cloudkeeper::One::Settings[:'opennebula-public-group'] = 'nonexistingvo'
+        end
 
-      it 'registers or updates appliance' do
-        registration.register_or_update_appliance appliance
-        expect(image_handler.find_by_name('qwerty123@rspec-datastore')).not_to be_nil
-        expect(image_handler.find_by_name('qwerty123@rspec-datastore')).not_to be_nil
+        let(:appliance) { Struct.new(:vo).new('rspec-group') }
+
+        it 'raises RegistrationError' do
+          expect { registration.register_or_update_appliance appliance }.to \
+            raise_error(Cloudkeeper::One::Errors::Actions::RegistrationError)
+        end
+      end
+
+      context 'with missing appliance' do
+        it 'raise ArgumentError' do
+          expect { registration.register_or_update_appliance nil }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
+        end
+      end
+
+      context 'with all well and good', :vcr do
+        let(:image) do
+          Image.new '/tmp/cloudkeeper-spec-register-image/image.ext', 'cloudkeeper-spec', 'cloudkeeper-spec', :LOCAL, 'raw', '', '123',
+                    '1b3a14fe8134'
+        end
+        let(:appliance) do
+          Appliance.new 'qwerty123', 'Spec!', '', '', '', '', '', '', '', '', 'rspec-group', '', '', image, '', '123',
+                        'b1ea3153bc15'
+        end
+        let(:image_handler) { Cloudkeeper::One::Opennebula::ImageHandler.new }
+        let(:template_handler) { Cloudkeeper::One::Opennebula::TemplateHandler.new }
+
+        it 'registers or updates appliance' do
+          registration.register_or_update_appliance appliance
+          image = image_handler.find_by_name('qwerty123@rspec-datastore')
+          template = template_handler.find_by_name('qwerty123@rspec-datastore')
+          expect(image).not_to be_nil
+          expect(template).not_to be_nil
+          expect(image.gid).to eq(101)
+          expect(template.gid).to eq(101)
+        end
       end
     end
   end
