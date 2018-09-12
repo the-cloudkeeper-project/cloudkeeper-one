@@ -4,6 +4,7 @@ cloudkeeper-one:
   certificate: /etc/grid-security/hostcert.pem # Backend's host certificate
   key: /etc/grid-security/hostkey.pem # Backend's host key
   identifier: cloudkeeper-one # Instance identifier
+  public: false # Run in public mode - register appliances under one public group (opennebula -> public-group option)
   core:
     certificate: /etc/grid-security/corecert.pem # Core's certificate
   appliances:
@@ -18,6 +19,7 @@ cloudkeeper-one:
     users: # Handle only images/templates of specified users
     api-call-timeout: 3h # How long will cloudkeeper-one wait for image/template operations to finish in OpenNebula
     allow-remote-source: true # Allows OpenNebula to directly download remote image
+    public-group: # Group to register appliances under in public mode
   logging:
     level: ERROR # Logging level
     file: /var/log/cloudkeeper/cloudkeeper-one.log # File to write log to. To turn off file logging leave this field empty.

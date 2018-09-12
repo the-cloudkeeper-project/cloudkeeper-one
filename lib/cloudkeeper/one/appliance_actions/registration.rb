@@ -10,8 +10,9 @@ module Cloudkeeper
         def register_or_update_appliance(proto_appliance)
           raise Cloudkeeper::One::Errors::ArgumentError, 'appliance cannot be nil' unless proto_appliance
 
-          group = group_handler.find_by_name proto_appliance.vo
-          raise Cloudkeeper::One::Errors::Actions::RegistrationError, "Missing group with name #{proto_appliance.vo}" unless group
+          group_name = Cloudkeeper::One::Settings[:public] ? Cloudkeeper::One::Settings[:'opennebula-public-group'] : proto_appliance.vo
+          group = group_handler.find_by_name group_name
+          raise Cloudkeeper::One::Errors::Actions::RegistrationError, "Missing group with name #{group_name}" unless group
 
           discard_images :find_by_appliance_id, proto_appliance.identifier
 
