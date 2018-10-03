@@ -21,12 +21,10 @@ describe Cloudkeeper::One::Opennebula::TemplateHandler do
 
   describe '.register', :vcr do
     let(:template_template) { 'NAME = "cloudkeeper-spec-template"' }
-    let(:group) { Cloudkeeper::One::Opennebula::GroupHandler.new.find_by_id 100 }
 
     it 'registers a new OpenNebula template' do
-      template = handler.register(template_template, group)
+      template = handler.register(template_template)
       expect(template).not_to be_nil
-      expect(template.gid).to eq(100)
       expect(template['PERMISSIONS/OWNER_U']).to eq('1')
       expect(template['PERMISSIONS/OWNER_M']).to eq('1')
       expect(template['PERMISSIONS/OWNER_A']).to eq('0')

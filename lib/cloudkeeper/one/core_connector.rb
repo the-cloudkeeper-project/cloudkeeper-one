@@ -1,7 +1,7 @@
 module Cloudkeeper
   module One
     class CoreConnector < CloudkeeperGrpc::Communicator::Service
-      attr_reader :image_handler, :template_handler, :datastore_handler, :group_handler
+      attr_reader :image_handler, :template_handler, :datastore_handler
 
       include Cloudkeeper::One::ApplianceActions::Registration
       include Cloudkeeper::One::ApplianceActions::Discard
@@ -27,7 +27,6 @@ module Cloudkeeper
         @image_handler = Cloudkeeper::One::Opennebula::ImageHandler.new
         @template_handler = Cloudkeeper::One::Opennebula::TemplateHandler.new
         @datastore_handler = Cloudkeeper::One::Opennebula::DatastoreHandler.new
-        @group_handler = Cloudkeeper::One::Opennebula::GroupHandler.new
       end
 
       def pre_action(_empty, _call)
