@@ -1,3 +1,4 @@
+require 'stringio'
 require 'erb'
 require 'tilt/erb'
 
@@ -21,13 +22,13 @@ module Cloudkeeper
           end
 
           def render_templates(templates, data)
-            Tempfile.open 'cloudkeeper-template' do |tmp|
-              templates.each { |template| tmp.write(File.read(template)) }
-              tmp.flush
-
-              template = Tilt::ERBTemplate.new tmp
-              template.render Object.new, data
+            template = Tilt::ERBTemplate.new do
+              io = StringIO.new
+              templates.each { |file| io.write(File.read(file)) }
+              io.string
             end
+
+            template.render Object.new, data
           end
         end
       end
