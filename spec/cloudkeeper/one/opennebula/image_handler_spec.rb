@@ -152,13 +152,11 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
   describe '.register', :vcr do
     let(:image_template) { "NAME = \"cloudkeeper-spec-image\"\nPATH = \"/var/tmp/file.img\"" }
     let(:datastore) { Cloudkeeper::One::Opennebula::DatastoreHandler.new.find_by_id 1 }
-    let(:group) { Cloudkeeper::One::Opennebula::GroupHandler.new.find_by_id 100 }
 
     context 'with correct template' do
       it 'registers new image in OpenNebula' do
-        image = handler.register(image_template, datastore, group)
+        image = handler.register(image_template, datastore)
         expect(image).not_to be_nil
-        expect(image.gid).to eq(100)
         expect(image['PERMISSIONS/OWNER_U']).to eq('1')
         expect(image['PERMISSIONS/OWNER_M']).to eq('1')
         expect(image['PERMISSIONS/OWNER_A']).to eq('0')
@@ -173,14 +171,14 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
 
     context 'when image is not ready within a timeout' do
       it 'raises ApiCallTimeoutError' do
-        expect { handler.register image_template, datastore, group }.to \
+        expect { handler.register image_template, datastore }.to \
           raise_error(Cloudkeeper::One::Errors::Opennebula::ApiCallTimeoutError)
       end
     end
 
     context 'when image goes into error state' do
       it 'removes failed image and raises ResourceStateError' do
-        expect { handler.register image_template, datastore, group }.to \
+        expect { handler.register image_template, datastore }.to \
           raise_error(Cloudkeeper::One::Errors::Opennebula::ResourceStateError)
       end
     end

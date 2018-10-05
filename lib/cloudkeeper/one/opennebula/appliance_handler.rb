@@ -50,18 +50,6 @@ module Cloudkeeper
           end
         end
 
-        def chgrp(element, group)
-          raise Cloudkeeper::One::Errors::ArgumentError, 'element cannot be nil' unless element
-
-          handle_opennebula_error { element.info! }
-          return if group.id == element.gid
-
-          handle_opennebula_error do
-            element.chown(LEAVE_ID_AS_IS, group.id)
-            element.info!
-          end
-        end
-
         private
 
         def find_all_by(attributes)

@@ -192,36 +192,6 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     end
   end
 
-  describe '.chgrp', :vcr do
-    before do
-      handler.pool = OpenNebula::ImagePool.new handler.client
-    end
-
-    let(:group) { Cloudkeeper::One::Opennebula::GroupHandler.new.find_by_id 100 }
-
-    context 'with nil element' do
-      it 'raises ArgumentError' do
-        expect { handler.chgrp nil, group }.to raise_error(Cloudkeeper::One::Errors::ArgumentError)
-      end
-    end
-
-    context 'with element with the same group' do
-      it 'will keep the same group' do
-        element = handler.find_by_id 5
-        handler.chgrp element, group
-        expect(element.gid).to eq(100)
-      end
-    end
-
-    context 'with element with different group' do
-      it 'changes element\'s group to specified group' do
-        element = handler.find_by_id 6
-        handler.chgrp element, group
-        expect(element.gid).to eq(100)
-      end
-    end
-  end
-
   describe '.update', :vcr do
     before do
       handler.pool = OpenNebula::ImagePool.new handler.client
