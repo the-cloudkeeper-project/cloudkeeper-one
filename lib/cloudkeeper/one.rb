@@ -2,7 +2,6 @@ require 'active_support/all'
 require 'opennebula'
 require 'json'
 require 'base64'
-require 'tempfile'
 
 module Cloudkeeper
   module One
