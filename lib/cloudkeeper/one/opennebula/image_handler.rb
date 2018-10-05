@@ -76,7 +76,7 @@ module Cloudkeeper
           handle_opennebula_error { image.update(expiration_attribute, true) }
         end
 
-        def register(image_template, datastore, group)
+        def register(image_template, datastore)
           image_alloc = OpenNebula::Image.build_xml
           image = OpenNebula::Image.new(image_alloc, client)
 
@@ -93,7 +93,6 @@ module Cloudkeeper
           end
 
           chmod image, Cloudkeeper::One::Settings[:'appliances-permissions']
-          chgrp image, group
 
           image
         end
