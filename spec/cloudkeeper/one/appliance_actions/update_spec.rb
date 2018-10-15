@@ -21,7 +21,7 @@ describe Cloudkeeper::One::ApplianceActions::Update do
     Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'] = 10
     Cloudkeeper::One::Settings[:'appliances-permissions'] = '646'
     Cloudkeeper::One::Settings[:'appliances-template-dir'] = File.join(MOCK_DIR, 'templates')
-    Cloudkeeper::One::Settings[:'opennebula-datastores'] = ['rspec-datastore']
+    Cloudkeeper::One::Settings[:'opennebula-datastore'] = 'rspec-datastore'
   end
 
   describe '.update_template', :vcr do
