@@ -31,8 +31,7 @@ module Cloudkeeper
 
       def pre_action(_empty, _call)
         logger.debug 'Running \'pre-action\'...'
-
-        call_backend { discard_expired }
+        Google::Protobuf::Empty.new
       end
 
       def post_action(_empty, _call)
@@ -74,6 +73,12 @@ module Cloudkeeper
         logger.debug "Retrieving appliances from image list #{image_list_identifier.image_list_identifier.inspect} " \
                      'registered in OpenNebula'
         call_backend(use_return_value: true) { list_appliances(image_list_identifier.image_list_identifier).each }
+      end
+
+      def remove_expired_appliances(_empty, _call)
+        logger.debug 'Removing expired appliances'
+
+        call_backend { discard_expired }
       end
 
       private
