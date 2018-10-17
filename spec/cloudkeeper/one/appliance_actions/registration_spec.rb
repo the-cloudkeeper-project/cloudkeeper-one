@@ -26,7 +26,7 @@ describe Cloudkeeper::One::ApplianceActions::Registration do
     Cloudkeeper::One::Settings[:'opennebula-api-call-timeout'] = 10
     Cloudkeeper::One::Settings[:'appliances-permissions'] = '646'
     Cloudkeeper::One::Settings[:'appliances-template-dir'] = File.join(MOCK_DIR, 'templates')
-    Cloudkeeper::One::Settings[:'opennebula-datastores'] = ['rspec-datastore']
+    Cloudkeeper::One::Settings[:'opennebula-datastore'] = 'rspec-datastore'
   end
 
   describe '.register_or_update_appliance' do

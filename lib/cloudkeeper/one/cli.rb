@@ -77,11 +77,11 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['opennebula']['endpoint'],
                     type: :string,
                     desc: 'OpenNebula XML-RPC endpoint'
-      method_option :'opennebula-datastores',
+      method_option :'opennebula-datastore',
                     required: true,
-                    default: Cloudkeeper::One::Settings['opennebula']['datastores'],
-                    type: :array,
-                    desc: 'OpenNebula datastores images will be uploaded to'
+                    default: Cloudkeeper::One::Settings['opennebula']['datastore'],
+                    type: :string,
+                    desc: 'OpenNebula datastore images will be uploaded to'
       method_option :'opennebula-users',
                     required: false,
                     default: Cloudkeeper::One::Settings['opennebula']['users'],

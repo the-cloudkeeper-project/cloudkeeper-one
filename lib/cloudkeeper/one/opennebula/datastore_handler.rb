@@ -6,10 +6,6 @@ module Cloudkeeper
           super
           @pool = OpenNebula::DatastorePool.new client
         end
-
-        def find_by_names(names)
-          names.map { |name| find_by_name name }.compact
-        end
       end
     end
   end

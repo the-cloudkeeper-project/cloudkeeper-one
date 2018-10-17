@@ -12,11 +12,9 @@ module Cloudkeeper
 
           discard_images :find_by_appliance_id, proto_appliance.identifier
 
-          datastores = datastore_handler.find_by_names Cloudkeeper::One::Settings[:'opennebula-datastores']
-          datastores.each do |datastore|
-            image = register_image proto_appliance, datastore
-            register_or_update_template proto_appliance, image
-          end
+          datastore = datastore_handler.find_by_name Cloudkeeper::One::Settings[:'opennebula-datastore']
+          image = register_image proto_appliance, datastore
+          register_or_update_template proto_appliance, image
         end
 
         private

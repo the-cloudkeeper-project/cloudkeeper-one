@@ -13,8 +13,7 @@ cloudkeeper-one:
   opennebula:
     secret: oneadmin:opennebula # If not specified, looking for secret in environment variable ONE_AUTH and file ~/.one/one_auth
     endpoint: http://localhost:2633/RPC2 # If not specified, looking for endpoint in environment variable ONE_XMLRPC and file ~/.one/one_endpoint
-    datastores: # Array of OpenNebula datastores images will be uploaded to
-      - default
+    datastore: default # OpenNebula datastore images will be uploaded to
     users: # Handle only images/templates of specified users
     api-call-timeout: 3h # How long will cloudkeeper-one wait for image/template operations to finish in OpenNebula
     allow-remote-source: true # Allows OpenNebula to directly download remote image
