@@ -54,8 +54,6 @@ module Cloudkeeper
 
         def find_all_by(attributes)
           xpaths = attributes.clone
-          xpaths['UNAME'] = Cloudkeeper::One::Settings[:'opennebula-users'] \
-            if Cloudkeeper::One::Settings[:'opennebula-users'] && !Cloudkeeper::One::Settings[:'opennebula-users'].empty?
 
           find_all xpaths
         end

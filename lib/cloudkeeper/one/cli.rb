@@ -82,11 +82,6 @@ module Cloudkeeper
                     default: Cloudkeeper::One::Settings['opennebula']['datastore'],
                     type: :string,
                     desc: 'OpenNebula datastore images will be uploaded to'
-      method_option :'opennebula-users',
-                    required: false,
-                    default: Cloudkeeper::One::Settings['opennebula']['users'],
-                    type: :array,
-                    desc: 'Handle only images/templates of specified users'
       method_option :'opennebula-api-call-timeout',
                     required: true,
                     default: Cloudkeeper::One::Settings['opennebula']['api-call-timeout'],

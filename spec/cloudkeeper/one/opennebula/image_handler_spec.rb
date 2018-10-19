@@ -22,27 +22,8 @@ describe Cloudkeeper::One::Opennebula::ImageHandler do
   end
 
   describe '.expired', :vcr do
-    context 'with users option set' do
-      before do
-        Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
-      end
-
-      it 'returns list of all exprired images, with specified identifier and owned by one of the specified users' do
-        images = handler.expired
-        expect(images.count).to eq(2)
-        expect(images.first.name).to eq('ttylinux05')
-        expect(images.last.name).to eq('ttylinux06')
-      end
-    end
-
-    context 'without users option set' do
-      before do
-        Cloudkeeper::One::Settings[:'opennebula-users'] = nil
-      end
-
-      it 'returns list of all expired images with specified identifier' do
-        expect(handler.expired.count).to eq(3)
-      end
+    it 'returns list of all expired images with specified identifier' do
+      expect(handler.expired.count).to eq(3)
     end
   end
 

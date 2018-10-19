@@ -25,30 +25,11 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     end
 
     context 'with existing appliance id' do
-      context 'with users option set' do
-        before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
-        end
-
-        it 'returns all elements with specified appliance id, with specified identifier and owned by one of the users' do
-          elements = handler.find_by_appliance_id '222'
-          expect(elements.count).to eq(2)
-          expect(elements.first.name).to eq('ttylinux03')
-          expect(elements.last.name).to eq('ttylinux05')
-        end
-      end
-
-      context 'without users options sets' do
-        before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = nil
-        end
-
-        it 'returns all elements with specified appliance id and with specified identifier' do
-          elements = handler.find_by_appliance_id '222'
-          expect(elements.count).to eq(2)
-          expect(elements.first.name).to eq('ttylinux02')
-          expect(elements.last.name).to eq('ttylinux03')
-        end
+      it 'returns all elements with specified appliance id and with specified identifier' do
+        elements = handler.find_by_appliance_id '222'
+        expect(elements.count).to eq(2)
+        expect(elements.first.name).to eq('ttylinux02')
+        expect(elements.last.name).to eq('ttylinux03')
       end
     end
 
@@ -65,30 +46,11 @@ describe Cloudkeeper::One::Opennebula::ApplianceHandler do
     end
 
     context 'with existing image list id' do
-      context 'with users option set' do
-        before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = %w[user kile]
-        end
-
-        it 'returns all elements with specified image list id, with specified identifier and owned by one of the users' do
-          elements = handler.find_by_image_list_id '222'
-          expect(elements.count).to eq(2)
-          expect(elements.first.name).to eq('ttylinux03')
-          expect(elements.last.name).to eq('ttylinux05')
-        end
-      end
-
-      context 'without users options sets' do
-        before do
-          Cloudkeeper::One::Settings[:'opennebula-users'] = nil
-        end
-
-        it 'returns all elements with specified image list id and with specified identifier' do
-          elements = handler.find_by_image_list_id '222'
-          expect(elements.count).to eq(3)
-          expect(elements.first.name).to eq('ttylinux03')
-          expect(elements.last.name).to eq('ttylinux05')
-        end
+      it 'returns all elements with specified image list id and with specified identifier' do
+        elements = handler.find_by_image_list_id '222'
+        expect(elements.count).to eq(3)
+        expect(elements.first.name).to eq('ttylinux03')
+        expect(elements.last.name).to eq('ttylinux05')
       end
     end
 
