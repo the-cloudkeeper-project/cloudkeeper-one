@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'grpc-tools', '~> 1.14'
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'pry-byebug', '~> 3.4'
-  spec.add_development_dependency 'rake', '~> 11.2'
+  spec.add_development_dependency 'rake', '~> 12.3'
   spec.add_development_dependency 'rspec', '~> 3.5'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.1'
   spec.add_development_dependency 'rubocop', '~> 0.48'
