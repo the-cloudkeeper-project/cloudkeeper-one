@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG branch=master
 ARG version
@@ -10,7 +10,7 @@ ENV applDir="${spoolDir}/appliances" \
     logDir="/var/log/${username}"
 
 LABEL application=${name} \
-      description="A tool for synchronizing appliances between cloudkeeper and OpenNebula" \
+      description="A tool for synchronizing appliances between Cloudkeeper and OpenNebula" \
       maintainer="kimle@cesnet.cz" \
       version=${version} \
       branch=${branch}
