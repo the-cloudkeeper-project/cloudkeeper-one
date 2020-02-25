@@ -212,7 +212,7 @@ describe Cloudkeeper::One::Opennebula::Handler do
       end
     end
 
-    if OpenNebula::VERSION < '5.4.3'
+    if Gem::Version.new(OpenNebula::VERSION) < Gem::Version.new('5.4.3')
       context 'with pool without info_mine! method' do
         before do
           handler.pool = OpenNebula::DatastorePool.new handler.client

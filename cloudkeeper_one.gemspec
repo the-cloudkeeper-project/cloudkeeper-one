@@ -29,16 +29,20 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.14'
+  spec.add_development_dependency 'bundler', '>= 1.13'
+  spec.add_development_dependency 'diffy', '~> 3.1'
+  spec.add_development_dependency 'google-protobuf', '~> 3.6.1'
   spec.add_development_dependency 'grpc-tools', '~> 1.14'
+  spec.add_development_dependency 'i18n', '~> 1.1.1'
   spec.add_development_dependency 'pry', '~> 0.10'
-  spec.add_development_dependency 'pry-byebug', '~> 3.4'
-  spec.add_development_dependency 'rake', '~> 12.3'
+  spec.add_development_dependency 'public_suffix', '~> 3.0.3'
+  spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.5'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.1'
-  spec.add_development_dependency 'rubocop', '~> 0.48'
-  spec.add_development_dependency 'rubocop-rspec', '~> 1.15'
+  spec.add_development_dependency 'rubocop', '0.60.0'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.32.0'
   spec.add_development_dependency 'simplecov', '~> 0.12'
+  spec.add_development_dependency 'simplecov-html', '~> 0.10.2'
   spec.add_development_dependency 'vcr', '~> 4.0'
   spec.add_development_dependency 'webmock', '~> 3.0'
 
