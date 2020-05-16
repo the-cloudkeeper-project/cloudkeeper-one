@@ -46,7 +46,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr', '~> 4.0'
   spec.add_development_dependency 'webmock', '~> 3.0'
 
-  spec.add_runtime_dependency 'activesupport', '>= 4.0', '< 6.0'
+  spec.add_runtime_dependency 'activesupport', '4.2.11.3'
   spec.add_runtime_dependency 'chronic_duration', '~> 0.10'
   spec.add_runtime_dependency 'grpc', '~> 1.8'
   spec.add_runtime_dependency 'opennebula', '~> 5.2'
